@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy | Absolute Data</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    :root { --bg: #0b0f15; --bg-soft: #0f1623; --text: #e6f1ff; --muted: #98a2b3; --primary: #6ee7ff; --secondary: #a78bfa; }
+    body { font-family: Inter, sans-serif; background: var(--bg); color: var(--text); }
+    .prose h5, .prose h6 { font-weight: 700; color: var(--text); margin-top: 1.5rem; margin-bottom: .5rem; }
+    .prose p { color: var(--muted); margin-bottom: 1rem; line-height: 1.75; font-size: .9rem; }
+    .prose ul, .prose ol { color: var(--muted); padding-left: 1.5rem; margin-bottom: 1rem; font-size: .9rem; line-height: 1.75; }
+    .prose li { margin-bottom: .25rem; }
+    .prose strong { color: var(--text); }
+    .prose hr { border-color: rgba(255,255,255,.06); margin: 1.5rem 0; }
+    .nav-dropdown { position: relative; }
+    .nav-dropdown-btn { display: flex; align-items: center; gap: 5px; padding: 8px 14px; border-radius: 8px; font-size: .9rem; color: var(--muted); cursor: pointer; background: none; border: none; transition: color .2s, background .2s; white-space: nowrap; font-weight: 500; }
+    .nav-dropdown-btn:hover, .nav-dropdown-btn.open { color: var(--text); background: rgba(255,255,255,.05); }
+    .nav-dropdown-btn svg { transition: transform .2s; }
+    .nav-dropdown-btn.open svg { transform: rotate(180deg); }
+    .nav-dropdown-menu { position: absolute; top: calc(100% + 8px); left: 0; min-width: 220px; background: #0d1420; border: 1px solid rgba(255,255,255,.12); border-radius: 14px; padding: 8px; box-shadow: 0 24px 64px rgba(0,0,0,.6), 0 0 0 1px rgba(110,231,255,.04); opacity: 0; pointer-events: none; transform: translateY(-8px); transition: opacity .2s, transform .2s; z-index: 100; }
+    .nav-dropdown-menu.show { opacity: 1; pointer-events: auto; transform: translateY(0); }
+    .nav-dropdown-menu a { display: flex; align-items: center; gap: 12px; padding: 11px 14px; border-radius: 10px; font-size: .875rem; color: var(--muted); text-decoration: none; transition: background .15s, color .15s; font-weight: 500; }
+    .nav-dropdown-menu a:hover { background: rgba(255,255,255,.07); color: var(--text); }
+    .nav-dropdown-menu a .icon { width: 32px; height: 32px; border-radius: 8px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+    .nav-dropdown-menu .menu-label { font-size: .67rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: rgba(152,162,179,.45); padding: 8px 14px 4px; display: block; }
+  </style>
+</head>
+<body class="antialiased">
+  <header style="background: rgba(11,15,21,0.95); border-bottom: 1px solid rgba(255,255,255,0.05);" class="sticky top-0 z-50">
+    <nav class="max-w-4xl mx-auto px-6 py-4 flex items-center justify-between">
+      <a href="index.html" class="flex items-center gap-3">
+        <img src="images/logo.png" alt="Absolute Data" class="h-9 w-9 rounded-lg object-cover" />
+        <span class="font-semibold text-white">Absolute Data</span>
+      </a>
+      <div class="hidden md:flex items-center gap-1">
+        <a href="index.html" class="px-3 py-2 rounded-lg text-sm" style="color:var(--muted)">Home</a>
+        <div class="nav-dropdown">
+          <button class="nav-dropdown-btn" id="ddProducts">Products <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg></button>
+          <div class="nav-dropdown-menu" id="menuProducts">
+            <span class="menu-label">Products</span>
+            <a href="fixed-income.html"><span class="icon bg-cyan-400/10 ring-1 ring-cyan-400/20"><svg class="text-cyan-300" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg></span>Fixed Income</a>
+            <a href="regulatory.html"><span class="icon bg-violet-500/10 ring-1 ring-violet-500/20"><svg class="text-violet-300" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M12 2l9 4v6c0 5-3.5 9-9 10-5.5-1-9-5-9-10V6l9-4z"/></svg></span>Regulatory</a>
+          </div>
+        </div>
+        <div class="nav-dropdown">
+          <button class="nav-dropdown-btn" id="ddData">Data Services <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg></button>
+          <div class="nav-dropdown-menu" id="menuData">
+            <span class="menu-label">Data Services</span>
+            <a href="data-services.html#reference-api"><span class="icon bg-cyan-400/10 ring-1 ring-cyan-400/20"><svg class="text-cyan-300" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/></svg></span>Reference API</a>
+            <a href="data-services.html#pricing-data"><span class="icon bg-cyan-400/10 ring-1 ring-cyan-400/20"><svg class="text-cyan-300" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M3 3v18h18"/><path d="M7 16l4-4 4 4 4-6"/></svg></span>Pricing Data</a>
+            <a href="data-services.html#corporate-action"><span class="icon bg-cyan-400/10 ring-1 ring-cyan-400/20"><svg class="text-cyan-300" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M4 4h16v16H4z"/><path d="M9 4v16M15 4v16M4 9h16M4 15h16"/></svg></span>Corporate Action</a>
+          </div>
+        </div>
+        <a href="about.html" class="px-3 py-2 rounded-lg text-sm" style="color:var(--muted)">About</a>
+        <a href="contact.html" class="px-3 py-2 rounded-lg text-sm" style="color:var(--muted)">Contact</a>
+      </div>
+    </nav>
+  </header>
+  <script>
+    function initDropdown(btnId,menuId){const btn=document.getElementById(btnId),menu=document.getElementById(menuId);if(!btn||!menu)return;btn.addEventListener('click',(e)=>{e.stopPropagation();const isOpen=menu.classList.contains('show');document.querySelectorAll('.nav-dropdown-menu').forEach(m=>m.classList.remove('show'));document.querySelectorAll('.nav-dropdown-btn').forEach(b=>b.classList.remove('open'));if(!isOpen){menu.classList.add('show');btn.classList.add('open');}});}
+    initDropdown('ddProducts','menuProducts');initDropdown('ddData','menuData');
+    document.addEventListener('click',()=>{document.querySelectorAll('.nav-dropdown-menu').forEach(m=>m.classList.remove('show'));document.querySelectorAll('.nav-dropdown-btn').forEach(b=>b.classList.remove('open'));});
+  </script>
+
+  <main class="max-w-4xl mx-auto px-6 py-16">
+    <div class="mb-10">
+      <h1 class="text-3xl font-bold mb-2">Privacy Policy</h1>
+      <p class="text-sm" style="color: var(--muted);">Privacy Policy of <strong style="color: var(--text);">Absolute Data Pipe Ltd</strong></p>
+      <p class="text-sm" style="color: var(--muted);"><strong style="color: var(--text);">Effective Date:</strong> 24 October 2025</p>
+    </div>
+
+    <div class="prose">
+      <p>This document sets forth the policy of Absolute Data Pipe Ltd, referred to herein as "the Company," regarding the collection, utilisation, and protection of personal data pertaining to its clients and their representatives. The Company processes personal data exclusively for specified, explicit, and legitimate purposes, relying on a defined lawful basis for each processing activity as required by UK data protection legislation.</p>
+
+      <p><strong>Contact Information for Data Matters</strong><br />
+      <strong>Email:</strong> <a href="mailto:info@absolutedata.ai" style="color: var(--primary);">info@absolutedata.ai</a></p>
+
+      <hr />
+      <h5>Data Processing Activities</h5>
+      <p><strong>Categories of Personal Data Processed, Purpose, and Lawful Basis</strong></p>
+      <p>All personal data processed by the Company is obtained directly from the data subject.</p>
+
+      <p><strong>Processing for Service Delivery and Account Management</strong></p>
+      <p>The Company processes personal data when necessary to fulfil service delivery and goods supply, and for the management of customer accounts and service guarantees. For these purposes, the Company processes personal data including: identifiers and contact particulars, transactional history, account registration information, records related to service feedback or formal complaints, data utilised for system security and access control, and preferences regarding marketing communications.</p>
+      <p>The lawful basis for this processing is Necessity for Contract Performance. All data subject rights apply, except the right to object to processing.</p>
+
+      <p><strong>Processing for Service Updates and Claims</strong></p>
+      <p>The Company processes personal data when necessary to issue service notifications and conduct marketing outreach, and for the resolution of disputes, claims, and formal complaints. For these purposes, the Company processes personal data including: identifiers and contact particulars, preferences regarding marketing communications, record of past service usage or purchases, documentation gathered from prior investigations, and records pertaining to customer accounts and client interactions.</p>
+      <p>The lawful basis for this processing is Necessity for Contract Performance. All data subject rights apply, except the right to object to processing.</p>
+
+      <p><strong>Data Retention Standard:</strong> The Company retains personal information associated with inactive accounts for a maximum period of two years from the date of account inactivity.</p>
+
+      <hr />
+      <h5>Data Subject Rights and Regulatory Information</h5>
+      <p>Under Chapter 3 of the UK General Data Protection Regulation (UK GDPR), you possess the following rights concerning your personal information:</p>
+      <ul>
+        <li><strong>Right of Access:</strong> The entitlement to obtain a copy of your personal data held by the Company, along with details regarding its purpose, source, and any recipients.</li>
+        <li><strong>Right to Rectification:</strong> The right to request the correction of any inaccurate personal data or the completion of any incomplete data.</li>
+        <li><strong>Right to Erasure (Right to be Forgotten):</strong> The right to request the deletion of your personal data under specific circumstances.</li>
+        <li><strong>Right to Restriction of Processing:</strong> The right to request that the Company limit the manner in which it uses your personal data.</li>
+        <li><strong>Right to Object to Processing:</strong> The right to object to the processing of your personal data.</li>
+        <li><strong>Right to Data Portability:</strong> The entitlement to receive your personal data in a structured, commonly used, and machine-readable format, and to transmit that data to another controller.</li>
+        <li><strong>Right to Withdraw Consent:</strong> Where processing is based on consent, you have the right to withdraw that consent at any time.</li>
+      </ul>
+      <p>The Company commits to responding to all formal data protection rights requests within a one-month period. To initiate such a request, please contact us using the email address provided above.</p>
+
+      <p><strong>Right to Lodge a Complaint</strong></p>
+      <p>Complaints regarding the Company's handling of your personal data should first be submitted using the contact details provided. The supervisory authority in the United Kingdom is the <strong>Information Commissioner's Office (ICO)</strong>. You have the right to lodge a complaint with the ICO.</p>
+      <p>Website: www.ico.org.uk/make-a-complaint<br />
+      Address: Wycliffe House, Water Lane, Wilmslow, Cheshire SK9 5AF<br />
+      Helpline: 0303 123 1113</p>
+    </div>
+  </main>
+
+  <footer class="py-8 border-t border-white/5" style="background: var(--bg);">
+    <div class="max-w-4xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-[var(--muted)]">
+      <a href="index.html" class="font-semibold text-white">Absolute Data</a>
+      <div class="flex gap-6">
+        <a href="privacy.html" class="hover:text-white">Privacy</a>
+        <a href="terms.html" class="hover:text-white">Terms</a>
+        <a href="contact.html" class="hover:text-white">Contact</a>
+      </div>
+      <div class="flex items-center gap-4">
+        <a href="https://www.linkedin.com/company/absolute-data-ai/posts/?feedView=all" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" class="hover:opacity-100 opacity-60 transition-opacity"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" style="color:#67e8f9"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a>
+        <p class="text-xs" style="color:var(--muted)">&copy; 2026 Absolute Data Pipe Ltd.</p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

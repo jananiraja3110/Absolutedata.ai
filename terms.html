@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Terms of Use | Absolute Data</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    :root { --bg: #0b0f15; --bg-soft: #0f1623; --text: #e6f1ff; --muted: #98a2b3; --primary: #6ee7ff; }
+    body { font-family: Inter, sans-serif; background: var(--bg); color: var(--text); }
+    .prose h5 { font-weight: 700; color: var(--text); margin-top: 1.5rem; margin-bottom: .5rem; font-size: 1rem; }
+    .prose p { color: var(--muted); margin-bottom: 1rem; line-height: 1.75; font-size: .875rem; }
+    .prose ul, .prose ol { color: var(--muted); padding-left: 1.5rem; margin-bottom: 1rem; font-size: .875rem; line-height: 1.75; }
+    .prose li { margin-bottom: .375rem; }
+    .prose strong { color: var(--text); }
+    .prose hr { border-color: rgba(255,255,255,.06); margin: 1.5rem 0; }
+    .nav-dropdown { position: relative; }
+    .nav-dropdown-btn { display: flex; align-items: center; gap: 5px; padding: 8px 14px; border-radius: 8px; font-size: .9rem; color: var(--muted); cursor: pointer; background: none; border: none; transition: color .2s, background .2s; white-space: nowrap; font-weight: 500; }
+    .nav-dropdown-btn:hover, .nav-dropdown-btn.open { color: var(--text); background: rgba(255,255,255,.05); }
+    .nav-dropdown-btn svg { transition: transform .2s; }
+    .nav-dropdown-btn.open svg { transform: rotate(180deg); }
+    .nav-dropdown-menu { position: absolute; top: calc(100% + 8px); left: 0; min-width: 220px; background: #0d1420; border: 1px solid rgba(255,255,255,.12); border-radius: 14px; padding: 8px; box-shadow: 0 24px 64px rgba(0,0,0,.6), 0 0 0 1px rgba(110,231,255,.04); opacity: 0; pointer-events: none; transform: translateY(-8px); transition: opacity .2s, transform .2s; z-index: 100; }
+    .nav-dropdown-menu.show { opacity: 1; pointer-events: auto; transform: translateY(0); }
+    .nav-dropdown-menu a { display: flex; align-items: center; gap: 12px; padding: 11px 14px; border-radius: 10px; font-size: .875rem; color: var(--muted); text-decoration: none; transition: background .15s, color .15s; font-weight: 500; }
+    .nav-dropdown-menu a:hover { background: rgba(255,255,255,.07); color: var(--text); }
+    .nav-dropdown-menu a .icon { width: 32px; height: 32px; border-radius: 8px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+    .nav-dropdown-menu .menu-label { font-size: .67rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: rgba(152,162,179,.45); padding: 8px 14px 4px; display: block; }
+  </style>
+</head>
+<body class="antialiased">
+  <header style="background: rgba(11,15,21,0.95); border-bottom: 1px solid rgba(255,255,255,0.05);" class="sticky top-0 z-50">
+    <nav class="max-w-4xl mx-auto px-6 py-4 flex items-center justify-between">
+      <a href="index.html" class="flex items-center gap-3">
+        <img src="images/logo.png" alt="Absolute Data" class="h-9 w-9 rounded-lg object-cover" />
+        <span class="font-semibold text-white">Absolute Data</span>
+      </a>
+      <div class="hidden md:flex items-center gap-1">
+        <a href="index.html" class="px-3 py-2 rounded-lg text-sm" style="color:var(--muted)">Home</a>
+        <div class="nav-dropdown">
+          <button class="nav-dropdown-btn" id="ddProducts">Products <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg></button>
+          <div class="nav-dropdown-menu" id="menuProducts">
+            <span class="menu-label">Products</span>
+            <a href="fixed-income.html"><span class="icon bg-cyan-400/10 ring-1 ring-cyan-400/20"><svg class="text-cyan-300" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg></span>Fixed Income</a>
+            <a href="regulatory.html"><span class="icon bg-violet-500/10 ring-1 ring-violet-500/20"><svg class="text-violet-300" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M12 2l9 4v6c0 5-3.5 9-9 10-5.5-1-9-5-9-10V6l9-4z"/></svg></span>Regulatory</a>
+          </div>
+        </div>
+        <div class="nav-dropdown">
+          <button class="nav-dropdown-btn" id="ddData">Data Services <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg></button>
+          <div class="nav-dropdown-menu" id="menuData">
+            <span class="menu-label">Data Services</span>
+            <a href="data-services.html#reference-api"><span class="icon bg-cyan-400/10 ring-1 ring-cyan-400/20"><svg class="text-cyan-300" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/></svg></span>Reference API</a>
+            <a href="data-services.html#pricing-data"><span class="icon bg-cyan-400/10 ring-1 ring-cyan-400/20"><svg class="text-cyan-300" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M3 3v18h18"/><path d="M7 16l4-4 4 4 4-6"/></svg></span>Pricing Data</a>
+            <a href="data-services.html#corporate-action"><span class="icon bg-cyan-400/10 ring-1 ring-cyan-400/20"><svg class="text-cyan-300" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M4 4h16v16H4z"/><path d="M9 4v16M15 4v16M4 9h16M4 15h16"/></svg></span>Corporate Action</a>
+          </div>
+        </div>
+        <a href="about.html" class="px-3 py-2 rounded-lg text-sm" style="color:var(--muted)">About</a>
+        <a href="contact.html" class="px-3 py-2 rounded-lg text-sm" style="color:var(--muted)">Contact</a>
+      </div>
+    </nav>
+  </header>
+  <script>
+    function initDropdown(btnId,menuId){const btn=document.getElementById(btnId),menu=document.getElementById(menuId);if(!btn||!menu)return;btn.addEventListener('click',(e)=>{e.stopPropagation();const isOpen=menu.classList.contains('show');document.querySelectorAll('.nav-dropdown-menu').forEach(m=>m.classList.remove('show'));document.querySelectorAll('.nav-dropdown-btn').forEach(b=>b.classList.remove('open'));if(!isOpen){menu.classList.add('show');btn.classList.add('open');}});}
+    initDropdown('ddProducts','menuProducts');initDropdown('ddData','menuData');
+    document.addEventListener('click',()=>{document.querySelectorAll('.nav-dropdown-menu').forEach(m=>m.classList.remove('show'));document.querySelectorAll('.nav-dropdown-btn').forEach(b=>b.classList.remove('open'));});
+  </script>
+
+  <main class="max-w-4xl mx-auto px-6 py-16">
+    <div class="mb-10">
+      <h1 class="text-3xl font-bold mb-2">Terms of Use</h1>
+      <p class="text-sm" style="color: var(--muted);"><strong style="color: var(--text);">Last Updated:</strong> 24 October 2025</p>
+    </div>
+
+    <div class="prose">
+      <h5>I. Acceptance of Terms</h5>
+      <p>This website, along with all information, tools, and services provided herein, is owned and operated by <strong>Absolute Data Pipe Ltd</strong>, also referred to as "the Company," "we," "us," or "our".</p>
+      <p>By accessing or using any part of the Company's website, or by visiting, registering, or purchasing access to our API data service (collectively, the "Service"), you agree to be bound by these Terms of Use ("Terms"). For the purpose of these Terms, the "Service" is defined exclusively as the API delivery system and the "Data" (meaning the fixed income reference data and the corporate actions data) delivered through that system. These Terms apply to all users, including browsers, customers, vendors, and content contributors.</p>
+      <p>Your acceptance of these Terms is a mandatory precondition for accessing or using the website or the Service. If you do not agree to all provisions within this agreement, you must refrain from accessing the website and using the Service.</p>
+
+      <hr />
+      <h5>II. Amendments to Terms and Service Modifications</h5>
+      <p>We reserve the sole right to update, modify, or replace any portion of these Terms of Use by posting revisions to our website. You are responsible for periodically reviewing this page for changes. Your continued use of or access to the website following the posting of any changes constitutes binding acceptance of those changes.</p>
+      <p>New features or tools subsequently added to the current Service shall also be governed by these Terms. We reserve the right at any time to modify or discontinue the Service, or any part or content thereof, without prior notice.</p>
+
+      <hr />
+      <h5>III. General Conditions of Use</h5>
+      <ol>
+        <li><strong>Eligibility:</strong> By accepting these Terms, you represent that you are at least the age of majority in your jurisdiction of residence.</li>
+        <li><strong>Prohibited Conduct:</strong> You shall not use our products or Service for any unauthorised or illegal purpose, nor violate any laws in your jurisdiction, including copyright laws.</li>
+        <li><strong>Breach:</strong> Any violation of these Terms will result in the immediate termination of your access to the Service.</li>
+        <li><strong>Reservation of Rights:</strong> We reserve the right to refuse the provision of Service to anyone for any reason at any time.</li>
+        <li><strong>Data Transmission:</strong> You acknowledge that your content may be transferred across various networks.</li>
+        <li><strong>Unauthorised Exploitation:</strong> You agree not to reproduce, duplicate, copy, sell, resell, redistribute, or exploit any portion of the Service without our express written permission.</li>
+      </ol>
+
+      <hr />
+      <h5>IV. Service and Data Use Limitations</h5>
+      <p><strong>Core Data Purpose and Disclaimer:</strong> The Data is intended solely for reference and integration purposes. The Data does not constitute investment advice, is not a recommendation to buy, sell, or hold any security, and does not express any opinion on the future value of any financial instrument.</p>
+      <p><strong>API and Technical Use Restrictions:</strong></p>
+      <ul>
+        <li>You must use only the API credentials assigned to you and shall not share or sub-license these credentials to any unauthorised third party.</li>
+        <li>You shall not exceed contractually agreed-upon usage limits, including the maximum number of daily queries or API call rate limits.</li>
+        <li>You shall not use the API in any manner that impairs the functionality or security of the Service.</li>
+      </ul>
+
+      <hr />
+      <h5>X. Intellectual Property and Data Licensing</h5>
+      <ol>
+        <li><strong>Ownership of Service and Data:</strong> All right, title, and interest in and to the Data, the API, the Website, and its contents are and shall remain the exclusive property of Absolute Data Pipe Ltd. Your only right is a non-exclusive, non-transferable license to use the Data subject to these Terms.</li>
+        <li><strong>Permitted Use of Data:</strong> You are granted a limited licence to use the Data solely for your internal business operations and integration into your internal systems. You are expressly prohibited from redistributing, sub-licensing, republishing, selling, or otherwise making the Data available to any external third party.</li>
+        <li><strong>Prohibited Uses:</strong> You must not use the Data to create a competing product or database, attempt to reverse engineer the API or Data model, or modify materials from this site.</li>
+      </ol>
+
+      <hr />
+      <h5>XIII. Disclaimer of Warranties; Limitation of Liability</h5>
+      <p>The Service and Data are provided "as is" and "as available," without any representations, warranties, or conditions of any kind. <strong>Absolute Data Pipe Ltd does not warrant</strong> the completeness, accuracy, timeliness, or reliability of the Data, or that API access will be uninterrupted or error-free.</p>
+      <p>In no case shall Absolute Data Pipe Ltd, or its directors, officers, employees, affiliates, agents, contractors, suppliers, or licensors, be liable for any injury, loss, claim, or any direct, indirect, incidental, special, punitive, or consequential damages of any kind, including any trading losses or financial losses incurred as a result of using or relying on the Data.</p>
+
+      <hr />
+      <h5>XIV. Indemnification</h5>
+      <p>You agree to indemnify, defend, and hold harmless <strong>Absolute Data Pipe Ltd</strong> and its parent, subsidiaries, affiliates, partners, officers, directors, agents, contractors, licensors, suppliers, and employees from and against any third-party claim or demand, including reasonable legal fees, arising out of your breach of these Terms of Use or your violation of any law or the rights of a third party.</p>
+
+      <hr />
+      <h5>XV. Miscellaneous Provisions</h5>
+      <ol>
+        <li><strong>Severability:</strong> If any provision of these Terms is deemed unlawful, void, or unenforceable, the remaining provisions shall remain in full effect.</li>
+        <li><strong>Termination:</strong> These Terms are effective until terminated by either you or us.</li>
+        <li><strong>Entire Agreement:</strong> These Terms of Use, along with any policies or rules posted on this site, constitute the entire agreement between you and us.</li>
+        <li><strong>Governing Law:</strong> These Terms of Use shall be governed by and construed in accordance with the laws of England and Wales. You agree to submit to the exclusive jurisdiction of the courts of England and Wales.</li>
+      </ol>
+
+      <hr />
+      <h5>XVI. Contact Information</h5>
+      <p>Questions regarding the Terms of Use should be sent to us at <a href="mailto:info@absolutedata.ai" style="color: var(--primary);">info@absolutedata.ai</a>.</p>
+    </div>
+  </main>
+
+  <footer class="py-8 border-t border-white/5" style="background: var(--bg);">
+    <div class="max-w-4xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-[var(--muted)]">
+      <a href="index.html" class="font-semibold text-white">Absolute Data</a>
+      <div class="flex gap-6">
+        <a href="privacy.html" class="hover:text-white">Privacy</a>
+        <a href="terms.html" class="hover:text-white">Terms</a>
+        <a href="contact.html" class="hover:text-white">Contact</a>
+      </div>
+      <div class="flex items-center gap-4">
+        <a href="https://www.linkedin.com/company/absolute-data-ai/posts/?feedView=all" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" class="hover:opacity-100 opacity-60 transition-opacity"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" style="color:#67e8f9"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a>
+        <p class="text-xs" style="color:var(--muted)">&copy; 2026 Absolute Data Pipe Ltd.</p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

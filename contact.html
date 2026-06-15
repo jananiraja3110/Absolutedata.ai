@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Us | Absolute Data</title>
+  <meta name="description" content="Get in touch with Absolute Data — fixed income data and Solvency UK analytics specialists." />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg: #0b0f15;
+      --bg-soft: #0f1623;
+      --text: #e6f1ff;
+      --muted: #98a2b3;
+      --primary: #6ee7ff;
+      --primary-strong: #22d3ee;
+      --secondary: #a78bfa;
+      --glow: 0 0 30px rgba(34,211,238,.25), 0 0 80px rgba(167,139,250,.15);
+    }
+    html { scroll-behavior: smooth; }
+    body { font-family: Inter, ui-sans-serif, system-ui, sans-serif; background: var(--bg); color: var(--text); }
+    .gradient-text { background: linear-gradient(90deg, var(--primary), var(--secondary)); -webkit-background-clip: text; background-clip: text; color: transparent; }
+    .reveal { opacity: 0; transform: translateY(20px); transition: opacity .6s ease, transform .6s ease; }
+    .reveal.show { opacity: 1; transform: translateY(0); }
+    .btn-primary { background: linear-gradient(135deg, rgba(110,231,255,.15), rgba(167,139,250,.15)); border: 1px solid rgba(255,255,255,.12); transition: box-shadow .3s; }
+    .btn-primary:hover { box-shadow: 0 8px 40px rgba(34,211,238,.3); }
+    .nav-link { transition: color .2s; }
+    .nav-link:hover { color: var(--text); }
+    .form-input {
+      width: 100%;
+      padding: .625rem .875rem;
+      border-radius: .75rem;
+      background: rgba(15,22,35,.8);
+      border: 1px solid rgba(255,255,255,.1);
+      color: var(--text);
+      font-size: .875rem;
+      outline: none;
+      transition: border-color .2s, box-shadow .2s;
+    }
+    .form-input:focus {
+      border-color: rgba(110,231,255,.4);
+      box-shadow: 0 0 0 3px rgba(110,231,255,.08);
+    }
+    .form-input::placeholder { color: var(--muted); }
+    textarea.form-input { resize: vertical; min-height: 130px; }
+    label { display: block; font-size: .8125rem; font-weight: 500; color: var(--muted); margin-bottom: .375rem; }
+    .nav-dropdown { position: relative; }
+    .nav-dropdown-btn { display: flex; align-items: center; gap: 5px; padding: 8px 14px; border-radius: 8px; font-size: .9rem; color: var(--muted); cursor: pointer; background: none; border: none; transition: color .2s, background .2s; white-space: nowrap; font-weight: 500; }
+    .nav-dropdown-btn:hover, .nav-dropdown-btn.open { color: var(--text); background: rgba(255,255,255,.05); }
+    .nav-dropdown-btn svg { transition: transform .2s; }
+    .nav-dropdown-btn.open svg { transform: rotate(180deg); }
+    .nav-dropdown-menu { position: absolute; top: calc(100% + 8px); left: 0; min-width: 220px; background: #0d1420; border: 1px solid rgba(255,255,255,.12); border-radius: 14px; padding: 8px; box-shadow: 0 24px 64px rgba(0,0,0,.6), 0 0 0 1px rgba(110,231,255,.04); opacity: 0; pointer-events: none; transform: translateY(-8px); transition: opacity .2s, transform .2s; z-index: 100; }
+    .nav-dropdown-menu.show { opacity: 1; pointer-events: auto; transform: translateY(0); }
+    .nav-dropdown-menu a { display: flex; align-items: center; gap: 12px; padding: 11px 14px; border-radius: 10px; font-size: .875rem; color: var(--muted); text-decoration: none; transition: background .15s, color .15s; font-weight: 500; }
+    .nav-dropdown-menu a:hover, .nav-dropdown-menu a.active { background: rgba(255,255,255,.07); color: var(--text); }
+    .nav-dropdown-menu a .icon { width: 32px; height: 32px; border-radius: 8px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+    .nav-dropdown-menu .menu-label { font-size: .67rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: rgba(152,162,179,.45); padding: 8px 14px 4px; display: block; }
+  </style>
+</head>
+<body class="antialiased">
+
+  <!-- NAV -->
+  <header id="nav" class="fixed top-0 left-0 right-0 z-50" style="background: rgba(11,15,21,0.9); backdrop-filter: blur(12px); border-bottom: 1px solid rgba(255,255,255,0.05);">
+    <nav class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+      <a href="index.html" class="flex items-center gap-3" aria-label="Absolute Data">
+        <img src="images/logo.png" alt="Absolute Data logo" class="h-10 w-10 rounded-lg object-cover" />
+        <span class="font-semibold tracking-tight text-white">Absolute Data</span>
+      </a>
+      <div class="hidden md:flex items-center gap-1">
+        <a href="index.html" class="nav-link px-3 py-2 rounded-lg text-sm text-[var(--muted)]">Home</a>
+        <a href="about.html" class="nav-link px-3 py-2 rounded-lg text-sm text-[var(--muted)]">About</a>
+        <div class="nav-dropdown">
+          <button class="nav-dropdown-btn" id="ddProducts">Products <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg></button>
+          <div class="nav-dropdown-menu" id="menuProducts">
+            <span class="menu-label">Products</span>
+            <a href="fixed-income.html"><span class="icon" style="background:rgba(34,211,238,0.18);box-shadow:0 0 0 1px rgba(34,211,238,0.35)"><svg style="color:#67e8f9" width="17" height="17" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg></span>Fixed Income</a>
+            <a href="regulatory.html"><span class="icon" style="background:rgba(167,139,250,0.18);box-shadow:0 0 0 1px rgba(167,139,250,0.35)"><svg style="color:#c4b5fd" width="17" height="17" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M12 2l9 4v6c0 5-3.5 9-9 10-5.5-1-9-5-9-10V6l9-4z"/></svg></span>Regulatory</a>
+          </div>
+        </div>
+        <div class="nav-dropdown">
+          <button class="nav-dropdown-btn" id="ddData">Data Services <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg></button>
+          <div class="nav-dropdown-menu" id="menuData">
+            <span class="menu-label">Data Services</span>
+            <a href="data-services.html#reference-api"><span class="icon" style="background:rgba(34,211,238,0.18);box-shadow:0 0 0 1px rgba(34,211,238,0.35)"><svg style="color:#67e8f9" width="17" height="17" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/></svg></span>Reference API</a>
+            <a href="data-services.html#pricing-data"><span class="icon" style="background:rgba(34,211,238,0.18);box-shadow:0 0 0 1px rgba(34,211,238,0.35)"><svg style="color:#67e8f9" width="17" height="17" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M3 3v18h18"/><path d="M7 16l4-4 4 4 4-6"/></svg></span>Pricing Data</a>
+            <a href="data-services.html#corporate-action"><span class="icon" style="background:rgba(34,211,238,0.18);box-shadow:0 0 0 1px rgba(34,211,238,0.35)"><svg style="color:#67e8f9" width="17" height="17" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M4 4h16v16H4z"/><path d="M9 4v16M15 4v16M4 9h16M4 15h16"/></svg></span>Corporate Action</a>
+          </div>
+        </div>
+        <a href="about.html" class="nav-link px-3 py-2 rounded-lg text-sm text-[var(--muted)]">About</a>
+        <a href="contact.html" class="px-3 py-2 rounded-lg text-sm text-white font-medium">Contact</a>
+        <a href="contact.html" class="ml-3 btn-primary px-4 py-2 rounded-xl text-sm font-medium text-white">Get in Touch</a>
+      </div>
+      <button id="menuBtn" class="md:hidden h-10 w-10 rounded-lg border border-white/10 flex items-center justify-center text-[var(--muted)] hover:text-white" aria-label="Open menu">
+        <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 5h12M3 9h12M3 13h12"/></svg>
+      </button>
+    </nav>
+    <div id="mobileMenu" class="hidden md:hidden border-t border-white/5" style="background: var(--bg);">
+      <div class="px-6 py-3 space-y-1">
+        <a href="index.html" class="block px-3 py-2 rounded-lg text-[var(--muted)] hover:text-white">Home</a>
+        <p class="px-3 pt-2 pb-1 text-xs font-semibold uppercase tracking-wider" style="color:rgba(152,162,179,.5);">Products</p>
+        <a href="fixed-income.html" class="block px-3 py-2 rounded-lg text-[var(--muted)] hover:text-white pl-6">Fixed Income</a>
+        <a href="regulatory.html" class="block px-3 py-2 rounded-lg text-[var(--muted)] hover:text-white pl-6">Regulatory</a>
+        <p class="px-3 pt-2 pb-1 text-xs font-semibold uppercase tracking-wider" style="color:rgba(152,162,179,.5);">Data Services</p>
+        <a href="data-services.html#reference-api" class="block px-3 py-2 rounded-lg text-[var(--muted)] hover:text-white pl-6">Reference API</a>
+        <a href="data-services.html#pricing-data" class="block px-3 py-2 rounded-lg text-[var(--muted)] hover:text-white pl-6">Pricing Data</a>
+        <a href="data-services.html#corporate-action" class="block px-3 py-2 rounded-lg text-[var(--muted)] hover:text-white pl-6">Corporate Action</a>
+        <a href="about.html" class="block px-3 py-2 rounded-lg text-[var(--muted)] hover:text-white">About</a>
+        <a href="contact.html" class="block px-3 py-2 rounded-lg text-white font-medium">Contact</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="pt-24">
+    <section class="py-20 relative overflow-hidden">
+      <div class="absolute inset-0 pointer-events-none">
+        <div class="absolute -top-20 -left-20 h-80 w-80 rounded-full bg-cyan-400/8 blur-3xl"></div>
+        <div class="absolute bottom-0 right-0 h-80 w-80 rounded-full bg-violet-500/8 blur-3xl"></div>
+      </div>
+      <div class="max-w-6xl mx-auto px-6 relative z-10">
+        <div class="reveal text-center mb-14">
+          <span class="inline-flex items-center gap-2 text-xs font-medium tracking-widest uppercase text-cyan-200/80 bg-cyan-400/10 ring-1 ring-cyan-400/20 px-3 py-1 rounded-full mb-4">
+            Contact Us
+          </span>
+          <h1 class="text-4xl md:text-5xl font-extrabold mb-4">Get in <span class="gradient-text">Touch</span></h1>
+          <p class="text-[var(--muted)] text-lg max-w-xl mx-auto">Reach out to discuss your data requirements, regulatory needs, or to request a product demonstration.</p>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-10">
+
+          <!-- Contact Form -->
+          <div class="reveal">
+            <div class="p-8 rounded-2xl ring-1 ring-white/10" style="background: var(--bg-soft);">
+              <h2 class="font-semibold text-lg mb-6">Send us a message</h2>
+              <form action="mailto:info@absolutedata.ai" method="POST" enctype="text/plain">
+                <div class="space-y-4">
+                  <div class="grid sm:grid-cols-2 gap-4">
+                    <div>
+                      <label for="name">Full Name</label>
+                      <input type="text" id="name" name="name" class="form-input" placeholder="Your name" required />
+                    </div>
+                    <div>
+                      <label for="company">Company</label>
+                      <input type="text" id="company" name="company" class="form-input" placeholder="Your firm" />
+                    </div>
+                  </div>
+                  <div>
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" class="form-input" placeholder="you@yourfirm.com" required />
+                  </div>
+                  <div>
+                    <label for="subject">Subject</label>
+                    <select id="subject" name="subject" class="form-input">
+                      <option value="">Select a topic...</option>
+                      <option>Fixed Income Reference Data</option>
+                      <option>Regulatory / Solvency UK Analytics</option>
+                      <option>Data Services (Reference API / Pricing / Corporate Actions)</option>
+                      <option>Partnership Enquiry</option>
+                      <option>General Enquiry</option>
+                    </select>
+                  </div>
+                  <div>
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" class="form-input" placeholder="Tell us about your requirements..."></textarea>
+                  </div>
+                  <button type="submit" class="w-full btn-primary py-3 rounded-xl text-white font-medium flex items-center justify-center gap-2">
+                    Send Message
+                    <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/></svg>
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+
+          <!-- Contact Details -->
+          <div class="reveal space-y-6">
+            <div class="p-6 rounded-2xl ring-1 ring-white/8" style="background: var(--bg-soft);">
+              <div class="flex gap-4">
+                <div class="inline-flex h-10 w-10 items-center justify-center rounded-xl bg-cyan-400/10 ring-1 ring-cyan-400/20 flex-shrink-0">
+                  <svg class="text-cyan-300" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+                </div>
+                <div>
+                  <p class="font-semibold text-sm mb-1">Office Address</p>
+                  <p class="text-sm text-[var(--muted)]">41 Bellfield Avenue<br />London, HA3 6ST<br />United Kingdom</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="p-6 rounded-2xl ring-1 ring-white/8" style="background: var(--bg-soft);">
+              <div class="flex gap-4">
+                <div class="inline-flex h-10 w-10 items-center justify-center rounded-xl bg-violet-500/10 ring-1 ring-violet-500/20 flex-shrink-0">
+                  <svg class="text-violet-300" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+                </div>
+                <div>
+                  <p class="font-semibold text-sm mb-1">Email</p>
+                  <a href="mailto:info@absolutedata.ai" class="text-sm text-cyan-300 hover:text-white transition-colors">info@absolutedata.ai</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="p-6 rounded-2xl ring-1 ring-white/8" style="background: var(--bg-soft);">
+              <div class="flex gap-4">
+                <div class="inline-flex h-10 w-10 items-center justify-center rounded-xl bg-cyan-400/10 ring-1 ring-cyan-400/20 flex-shrink-0">
+                  <svg class="text-cyan-300" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+                </div>
+                <div>
+                  <p class="font-semibold text-sm mb-1">Response Time</p>
+                  <p class="text-sm text-[var(--muted)]">We aim to respond to all enquiries within one business day. For urgent data or regulatory matters, please mark your subject accordingly.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Product Links -->
+            <div class="p-6 rounded-2xl ring-1 ring-white/8" style="background: var(--bg-soft);">
+              <p class="font-semibold text-sm mb-4">Interested in a specific product?</p>
+              <div class="space-y-2">
+                <a href="products.html#fixed-income" class="flex items-center gap-2 text-sm text-[var(--muted)] hover:text-cyan-300 transition-colors">
+                  <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                  Fixed Income Reference Data
+                </a>
+                <a href="products.html#regulatory" class="flex items-center gap-2 text-sm text-[var(--muted)] hover:text-violet-300 transition-colors">
+                  <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                  Regulatory / Solvency UK Analytics
+                </a>
+                <a href="products.html#data-services" class="flex items-center gap-2 text-sm text-[var(--muted)] hover:text-cyan-300 transition-colors">
+                  <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                  Data Services (API / Pricing / Corporate Actions)
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="py-10 border-t border-white/5" style="background: var(--bg);">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="flex flex-col md:flex-row items-center justify-between gap-6">
+        <a href="index.html" class="flex items-center gap-3">
+          <img src="images/logo.png" alt="Absolute Data" class="h-9 w-9 rounded-lg object-cover" />
+          <span class="font-semibold text-white">Absolute Data</span>
+        </a>
+        <nav class="flex flex-wrap gap-x-6 gap-y-2 text-sm text-[var(--muted)]">
+          <a href="products.html" class="hover:text-white transition-colors">Products</a>
+          <a href="about.html" class="hover:text-white transition-colors">About</a>
+          <a href="contact.html" class="hover:text-white transition-colors">Contact</a>
+          <a href="privacy.html" class="hover:text-white transition-colors">Privacy</a>
+          <a href="terms.html" class="hover:text-white transition-colors">Terms</a>
+        </nav>
+        <div class="flex items-center gap-4">
+          <a href="https://www.linkedin.com/company/absolute-data-ai/posts/?feedView=all" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" class="hover:opacity-100 opacity-60 transition-opacity"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" style="color:#67e8f9"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a>
+          <p class="text-xs text-[var(--muted)]">&copy; 2026 Absolute Data Pipe Ltd.</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    function initDropdown(btnId, menuId) { const btn = document.getElementById(btnId), menu = document.getElementById(menuId); if (!btn||!menu) return; btn.addEventListener('click', (e) => { e.stopPropagation(); const isOpen = menu.classList.contains('show'); document.querySelectorAll('.nav-dropdown-menu').forEach(m=>m.classList.remove('show')); document.querySelectorAll('.nav-dropdown-btn').forEach(b=>b.classList.remove('open')); if (!isOpen){menu.classList.add('show');btn.classList.add('open');} }); }
+    initDropdown('ddProducts','menuProducts'); initDropdown('ddData','menuData');
+    document.addEventListener('click', ()=>{ document.querySelectorAll('.nav-dropdown-menu').forEach(m=>m.classList.remove('show')); document.querySelectorAll('.nav-dropdown-btn').forEach(b=>b.classList.remove('open')); });
+    document.getElementById('menuBtn').addEventListener('click', () => {
+      document.getElementById('mobileMenu').classList.toggle('hidden');
+    });
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('show'); });
+    }, { threshold: 0.08 });
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+  </script>
+</body>
+</html>

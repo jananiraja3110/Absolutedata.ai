@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fixed Income | Absolute Data</title>
+  <meta name="description" content="Comprehensive reference data and corporate actions for global fixed income markets." />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <style>
+    :root { --bg:#0b0f15; --bg-soft:#0f1623; --text:#e6f1ff; --muted:#98a2b3; --primary:#6ee7ff; --primary-strong:#22d3ee; --secondary:#a78bfa; --glow:0 0 30px rgba(34,211,238,.25),0 0 80px rgba(167,139,250,.15); }
+    html { scroll-behavior:smooth; }
+    body { font-family:Inter,ui-sans-serif,system-ui,sans-serif; background:var(--bg); color:var(--text); }
+    .gradient-text { background:linear-gradient(90deg,var(--primary),var(--secondary)); -webkit-background-clip:text; background-clip:text; color:transparent; }
+    .card { transition:transform .35s ease,box-shadow .35s ease; backdrop-filter:blur(8px); }
+    .card:hover { transform:translateY(-4px); box-shadow:var(--glow); }
+    .reveal { opacity:0; transform:translateY(20px); transition:opacity .6s ease,transform .6s ease; }
+    .reveal.show { opacity:1; transform:translateY(0); }
+    .btn-primary { background:linear-gradient(135deg,rgba(110,231,255,.15),rgba(167,139,250,.15)); border:1px solid rgba(255,255,255,.12); transition:box-shadow .3s; }
+    .btn-primary:hover { box-shadow:0 8px 40px rgba(34,211,238,.3); }
+    .nav-dropdown { position:relative; }
+    .nav-dropdown-btn { display:flex; align-items:center; gap:5px; padding:8px 14px; border-radius:8px; font-size:.9rem; color:var(--muted); cursor:pointer; background:none; border:none; transition:color .2s,background .2s; white-space:nowrap; font-weight:500; }
+    .nav-dropdown-btn:hover,.nav-dropdown-btn.open { color:var(--text); background:rgba(255,255,255,.05); }
+    .nav-dropdown-btn svg { transition:transform .2s; }
+    .nav-dropdown-btn.open svg { transform:rotate(180deg); }
+    .nav-dropdown-menu { position:absolute; top:calc(100% + 8px); left:0; min-width:220px; background:#0d1420; border:1px solid rgba(255,255,255,.12); border-radius:14px; padding:8px; box-shadow:0 24px 64px rgba(0,0,0,.6),0 0 0 1px rgba(110,231,255,.04); opacity:0; pointer-events:none; transform:translateY(-8px); transition:opacity .2s,transform .2s; z-index:100; }
+    .nav-dropdown-menu.show { opacity:1; pointer-events:auto; transform:translateY(0); }
+    .nav-dropdown-menu a { display:flex; align-items:center; gap:12px; padding:11px 14px; border-radius:10px; font-size:.875rem; color:var(--muted); text-decoration:none; transition:background .15s,color .15s; font-weight:500; }
+    .nav-dropdown-menu a:hover,.nav-dropdown-menu a.active { background:rgba(255,255,255,.07); color:var(--text); }
+    .nav-dropdown-menu a .icon { width:32px; height:32px; border-radius:8px; display:flex; align-items:center; justify-content:center; flex-shrink:0; }
+    .nav-dropdown-menu .menu-label { font-size:.67rem; font-weight:700; letter-spacing:.1em; text-transform:uppercase; color:rgba(152,162,179,.45); padding:8px 14px 4px; display:block; }
+  </style>
+</head>
+<body class="antialiased">
+  <header id="nav" class="fixed top-0 left-0 right-0 z-50" style="background:rgba(11,15,21,0.9);backdrop-filter:blur(12px);border-bottom:1px solid rgba(255,255,255,0.05);">
+    <nav class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+      <a href="index.html" class="flex items-center gap-3"><img src="images/logo.png" alt="Absolute Data" class="h-10 w-10 rounded-lg object-cover"/><span class="font-semibold tracking-tight text-white">Absolute Data</span></a>
+      <div class="hidden md:flex items-center gap-1">
+        <a href="index.html" class="px-3 py-2 rounded-lg text-sm" style="color:var(--muted)">Home</a>
+        <a href="about.html" class="px-3 py-2 rounded-lg text-sm" style="color:var(--muted)">About</a>
+        <div class="nav-dropdown">
+          <button class="nav-dropdown-btn" id="ddProducts" style="color:var(--text)">Products <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg></button>
+          <div class="nav-dropdown-menu" id="menuProducts">
+            <span class="menu-label">Products</span>
+            <a href="fixed-income.html" class="active"><span class="icon" style="background:rgba(34,211,238,0.18);box-shadow:0 0 0 1px rgba(34,211,238,0.35)"><svg style="color:#67e8f9" width="17" height="17" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg></span>Fixed Income</a>
+            <a href="regulatory.html"><span class="icon" style="background:rgba(167,139,250,0.18);box-shadow:0 0 0 1px rgba(167,139,250,0.35)"><svg style="color:#c4b5fd" width="17" height="17" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M12 2l9 4v6c0 5-3.5 9-9 10-5.5-1-9-5-9-10V6l9-4z"/></svg></span>Regulatory</a>
+          </div>
+        </div>
+        <div class="nav-dropdown">
+          <button class="nav-dropdown-btn" id="ddData">Data Services <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg></button>
+          <div class="nav-dropdown-menu" id="menuData">
+            <span class="menu-label">Data Services</span>
+            <a href="data-services.html#reference-api"><span class="icon" style="background:rgba(34,211,238,0.18);box-shadow:0 0 0 1px rgba(34,211,238,0.35)"><svg style="color:#67e8f9" width="17" height="17" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/></svg></span>Reference API</a>
+            <a href="data-services.html#pricing-data"><span class="icon" style="background:rgba(34,211,238,0.18);box-shadow:0 0 0 1px rgba(34,211,238,0.35)"><svg style="color:#67e8f9" width="17" height="17" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M3 3v18h18"/><path d="M7 16l4-4 4 4 4-6"/></svg></span>Pricing Data</a>
+            <a href="data-services.html#corporate-action"><span class="icon" style="background:rgba(34,211,238,0.18);box-shadow:0 0 0 1px rgba(34,211,238,0.35)"><svg style="color:#67e8f9" width="17" height="17" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M4 4h16v16H4z"/><path d="M9 4v16M15 4v16M4 9h16M4 15h16"/></svg></span>Corporate Action</a>
+          </div>
+        </div>
+        <a href="about.html" class="px-3 py-2 rounded-lg text-sm" style="color:var(--muted)">About</a>
+        <a href="contact.html" class="px-3 py-2 rounded-lg text-sm" style="color:var(--muted)">Contact</a>
+        <a href="contact.html" class="ml-3 btn-primary px-4 py-2 rounded-xl text-sm font-medium text-white">Get in Touch</a>
+      </div>
+      <button id="menuBtn" class="md:hidden h-10 w-10 rounded-lg border border-white/10 flex items-center justify-center" style="color:var(--muted)" aria-label="Open menu">
+        <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 5h12M3 9h12M3 13h12"/></svg>
+      </button>
+    </nav>
+    <div id="mobileMenu" class="hidden md:hidden border-t border-white/5" style="background:var(--bg)">
+      <div class="px-6 py-3 space-y-1">
+        <a href="index.html" class="block px-3 py-2 rounded-lg" style="color:var(--muted)">Home</a>
+        <p class="px-3 pt-2 pb-1 text-xs font-semibold uppercase tracking-wider" style="color:rgba(152,162,179,.5)">Products</p>
+        <a href="fixed-income.html" class="block px-3 py-2 rounded-lg text-white font-medium pl-6">Fixed Income</a>
+        <a href="regulatory.html" class="block px-3 py-2 rounded-lg pl-6" style="color:var(--muted)">Regulatory</a>
+        <p class="px-3 pt-2 pb-1 text-xs font-semibold uppercase tracking-wider" style="color:rgba(152,162,179,.5)">Data Services</p>
+        <a href="data-services.html#reference-api" class="block px-3 py-2 rounded-lg pl-6" style="color:var(--muted)">Reference API</a>
+        <a href="data-services.html#pricing-data" class="block px-3 py-2 rounded-lg pl-6" style="color:var(--muted)">Pricing Data</a>
+        <a href="data-services.html#corporate-action" class="block px-3 py-2 rounded-lg pl-6" style="color:var(--muted)">Corporate Action</a>
+        <a href="about.html" class="block px-3 py-2 rounded-lg" style="color:var(--muted)">About</a>
+        <a href="contact.html" class="block px-3 py-2 rounded-lg" style="color:var(--muted)">Contact</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="pt-24">
+    <!-- HEADER -->
+    <section class="relative py-16 overflow-hidden">
+      <div class="absolute inset-0 pointer-events-none">
+        <div class="absolute -top-20 -left-20 h-72 w-72 rounded-full bg-cyan-400/8 blur-3xl"></div>
+        <div class="absolute -bottom-20 right-0 h-72 w-72 rounded-full bg-cyan-400/5 blur-3xl"></div>
+      </div>
+      <div class="max-w-6xl mx-auto px-6 relative z-10">
+        <div class="reveal">
+          <a href="index.html" class="inline-flex items-center gap-2 text-sm mb-6 hover:text-white transition-colors" style="color:var(--muted)">
+            <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M19 12H5M12 5l-7 7 7 7"/></svg> Back to Home
+          </a>
+          <div class="flex items-center gap-4 mb-4">
+            <div class="inline-flex h-14 w-14 items-center justify-center rounded-2xl bg-cyan-400/10 ring-1 ring-cyan-400/20">
+              <svg class="text-cyan-300" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+            </div>
+            <div>
+              <span class="inline-flex items-center text-xs font-semibold tracking-widest uppercase text-cyan-200/80 bg-cyan-400/10 ring-1 ring-cyan-400/20 px-3 py-1 rounded-full">Fixed Income</span>
+              <h1 class="text-4xl md:text-5xl font-extrabold mt-1">Absolute Reference Data</h1>
+            </div>
+          </div>
+          <p class="text-xl max-w-3xl" style="color:var(--muted)">The foundation of any sound investment strategy is accurate data. We serve as the golden source for identifiers and descriptive information, ensuring consistency across your operations.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- MAIN CONTENT -->
+    <section class="pb-20">
+      <div class="max-w-6xl mx-auto px-6">
+        <div class="reveal rounded-2xl p-8 md:p-10 ring-1 ring-white/10 mb-10" style="background:var(--bg-soft)">
+          <p class="text-lg leading-relaxed mb-8" style="color:var(--muted)">
+            Absolute Reference Data provides a comprehensive, accurate, and timely static data layer for a vast universe of global fixed income instruments. We present collated and verified information, including issuer details, cashflow specifics, amounts paid, option schedules (call, put, and sink provisions), and important coupon and interest payment data across Municipals, Government, Supranational, Agency, Corporate (GSAC) securities, and Securitised products.
+          </p>
+
+          <h2 class="font-semibold text-xl mb-5 text-white">Key Features</h2>
+          <div class="grid sm:grid-cols-2 gap-4 mb-10">
+            <div class="flex gap-3 p-5 rounded-xl ring-1 ring-white/8" style="background:rgba(110,231,255,0.04)">
+              <svg class="text-cyan-400 flex-shrink-0 mt-0.5" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg>
+              <div><span class="font-medium text-sm text-white">Comprehensive Instrument Coverage</span><p class="text-xs mt-1" style="color:var(--muted)">Extensive data on government securities, corporate bonds, money market instruments, and more across major global markets.</p></div>
+            </div>
+            <div class="flex gap-3 p-5 rounded-xl ring-1 ring-white/8" style="background:rgba(110,231,255,0.04)">
+              <svg class="text-cyan-400 flex-shrink-0 mt-0.5" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg>
+              <div><span class="font-medium text-sm text-white">Granular Data Fields</span><p class="text-xs mt-1" style="color:var(--muted)">Key identifiers (ISIN, CUSIP) and hundreds of fields — structural details, credit ratings from global agencies, option schedules, and more.</p></div>
+            </div>
+            <div class="flex gap-3 p-5 rounded-xl ring-1 ring-white/8" style="background:rgba(110,231,255,0.04)">
+              <svg class="text-cyan-400 flex-shrink-0 mt-0.5" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg>
+              <div><span class="font-medium text-sm text-white">Rigorous Quality Assurance</span><p class="text-xs mt-1" style="color:var(--muted)">Daily updates and multi-level validation checks ensuring the highest degree of data accuracy and reliability.</p></div>
+            </div>
+            <div class="flex gap-3 p-5 rounded-xl ring-1 ring-white/8" style="background:rgba(110,231,255,0.04)">
+              <svg class="text-cyan-400 flex-shrink-0 mt-0.5" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg>
+              <div><span class="font-medium text-sm text-white">REST API Delivery</span><p class="text-xs mt-1" style="color:var(--muted)">Integrate seamlessly via high-performance REST API designed for institutional-grade reliability and speed.</p></div>
+            </div>
+          </div>
+
+          <h2 class="font-semibold text-xl mb-5 text-white">Asset Class Coverage</h2>
+          <div class="flex flex-wrap gap-2 mb-10">
+            <span class="px-3 py-1 text-xs rounded-full ring-1 text-cyan-200" style="background:rgba(110,231,255,.08);border-color:rgba(110,231,255,.2)">Government Securities</span>
+            <span class="px-3 py-1 text-xs rounded-full ring-1 text-cyan-200" style="background:rgba(110,231,255,.08);border-color:rgba(110,231,255,.2)">Corporate Bonds</span>
+            <span class="px-3 py-1 text-xs rounded-full ring-1 text-cyan-200" style="background:rgba(110,231,255,.08);border-color:rgba(110,231,255,.2)">Supranationals</span>
+            <span class="px-3 py-1 text-xs rounded-full ring-1 text-cyan-200" style="background:rgba(110,231,255,.08);border-color:rgba(110,231,255,.2)">Agency Bonds</span>
+            <span class="px-3 py-1 text-xs rounded-full ring-1 text-cyan-200" style="background:rgba(110,231,255,.08);border-color:rgba(110,231,255,.2)">Municipals</span>
+            <span class="px-3 py-1 text-xs rounded-full ring-1 text-cyan-200" style="background:rgba(110,231,255,.08);border-color:rgba(110,231,255,.2)">Money Market Instruments</span>
+            <span class="px-3 py-1 text-xs rounded-full ring-1 text-cyan-200" style="background:rgba(110,231,255,.08);border-color:rgba(110,231,255,.2)">Securitised Products</span>
+            <span class="px-3 py-1 text-xs rounded-full ring-1 text-cyan-200" style="background:rgba(110,231,255,.08);border-color:rgba(110,231,255,.2)">Structured Credit</span>
+          </div>
+
+          <a href="contact.html" class="btn-primary inline-flex items-center gap-2 px-6 py-3 rounded-xl text-white font-medium">
+            Enquire About Reference Data
+            <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+
+        <!-- Cross-links -->
+        <div class="reveal grid sm:grid-cols-2 gap-4">
+          <a href="regulatory.html" class="card p-5 rounded-2xl ring-1 ring-white/10 hover:ring-violet-400/30 block" style="background:var(--bg-soft)">
+            <div class="inline-flex h-9 w-9 items-center justify-center rounded-lg bg-violet-500/10 ring-1 ring-violet-500/20 mb-3">
+              <svg class="text-violet-300" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M12 2l9 4v6c0 5-3.5 9-9 10-5.5-1-9-5-9-10V6l9-4z"/></svg>
+            </div>
+            <h3 class="font-semibold text-sm mb-1 flex items-center gap-1">Regulatory <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></h3>
+            <p class="text-xs" style="color:var(--muted)">Solvency UK / MA analytics and PRA compliance tooling.</p>
+          </a>
+          <a href="data-services.html" class="card p-5 rounded-2xl ring-1 ring-white/10 hover:ring-cyan-400/30 block" style="background:var(--bg-soft)">
+            <div class="inline-flex h-9 w-9 items-center justify-center rounded-lg bg-cyan-400/10 ring-1 ring-cyan-400/20 mb-3">
+              <svg class="text-cyan-300" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 5v14c0 1.66 4.03 3 9 3s9-1.34 9-3V5"/><path d="M3 12c0 1.66 4.03 3 9 3s9-1.34 9-3"/></svg>
+            </div>
+            <h3 class="font-semibold text-sm mb-1 flex items-center gap-1">Data Services <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></h3>
+            <p class="text-xs" style="color:var(--muted)">Reference API, Pricing Data, and Corporate Action delivery.</p>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="py-10 border-t border-white/5" style="background:var(--bg)">
+    <div class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-6">
+      <a href="index.html" class="flex items-center gap-3"><img src="images/logo.png" alt="Absolute Data" class="h-9 w-9 rounded-lg object-cover"/><span class="font-semibold text-white">Absolute Data</span></a>
+      <nav class="flex flex-wrap gap-x-6 gap-y-2 text-sm" style="color:var(--muted)">
+        <a href="fixed-income.html" class="hover:text-white transition-colors">Fixed Income</a>
+        <a href="regulatory.html" class="hover:text-white transition-colors">Regulatory</a>
+        <a href="data-services.html" class="hover:text-white transition-colors">Data Services</a>
+        <a href="about.html" class="hover:text-white transition-colors">About</a>
+        <a href="privacy.html" class="hover:text-white transition-colors">Privacy</a>
+        <a href="terms.html" class="hover:text-white transition-colors">Terms</a>
+      </nav>
+      <div class="flex items-center gap-4">
+        <a href="https://www.linkedin.com/company/absolute-data-ai/posts/?feedView=all" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" class="hover:opacity-100 opacity-60 transition-opacity"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" style="color:#67e8f9"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a>
+        <p class="text-xs" style="color:var(--muted)">&copy; 2026 Absolute Data Pipe Ltd.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    function initDropdown(btnId, menuId) { const btn=document.getElementById(btnId),menu=document.getElementById(menuId); if(!btn||!menu)return; btn.addEventListener('click',(e)=>{e.stopPropagation();const isOpen=menu.classList.contains('show');document.querySelectorAll('.nav-dropdown-menu').forEach(m=>m.classList.remove('show'));document.querySelectorAll('.nav-dropdown-btn').forEach(b=>b.classList.remove('open'));if(!isOpen){menu.classList.add('show');btn.classList.add('open');}}); }
+    initDropdown('ddProducts','menuProducts'); initDropdown('ddData','menuData');
+    document.addEventListener('click',()=>{document.querySelectorAll('.nav-dropdown-menu').forEach(m=>m.classList.remove('show'));document.querySelectorAll('.nav-dropdown-btn').forEach(b=>b.classList.remove('open'));});
+    document.getElementById('menuBtn').addEventListener('click',()=>{document.getElementById('mobileMenu').classList.toggle('hidden');});
+    const obs=new IntersectionObserver((entries)=>{entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('show');});},{threshold:0.08});
+    document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
+  </script>
+</body>
+</html>
