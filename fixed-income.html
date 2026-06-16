@@ -63,10 +63,6 @@
               <span class="icon" style="background:rgba(34,211,238,0.18);box-shadow:0 0 0 1px rgba(34,211,238,0.35)"><svg style="color:#67e8f9" width="17" height="17" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M3 3v18h18"/><path d="M7 16l4-4 4 4 4-6"/></svg></span>
               <span class="dd-text"><span class="dd-title">Pricing</span><span class="dd-desc">EOD &amp; intraday fixed income pricing feeds</span></span>
             </a>
-            <a href="fixed-income.html#municipal" class="dd-item">
-              <span class="icon" style="background:rgba(34,211,238,0.18);box-shadow:0 0 0 1px rgba(34,211,238,0.35)"><svg style="color:#67e8f9" width="17" height="17" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg></span>
-              <span class="dd-text"><span class="dd-title">Municipal</span><span class="dd-desc">Muni bond data across securitised products</span></span>
-            </a>
           </div>
         </div>
 
@@ -85,7 +81,7 @@
             </a>
             <a href="regulatory-intelligence.html#lei-mapping" class="dd-item">
               <span class="icon" style="background:rgba(251,191,36,0.18);box-shadow:0 0 0 1px rgba(251,191,36,0.35)"><svg style="color:#fcd34d" width="17" height="17" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"/></svg></span>
-              <span class="dd-text"><span class="dd-title">LEI &amp; Instrument Mapping</span><span class="dd-desc">Cross-reference LEIs to ISIN, CUSIP, FIGI, SEDOL</span></span>
+              <span class="dd-text"><span class="dd-title">LEI &amp; Instrument Mapping</span><span class="dd-desc">Cross-reference LEIs to ISIN, FIGI and other identifiers</span></span>
             </a>
           </div>
         </div>
@@ -103,7 +99,6 @@
         <a href="fixed-income.html#reference-api" class="block px-3 py-2 rounded-lg text-[var(--muted)] hover:text-white pl-6">Reference Data</a>
         <a href="fixed-income.html#corporate-action" class="block px-3 py-2 rounded-lg text-[var(--muted)] hover:text-white pl-6">Corporate Actions</a>
         <a href="fixed-income.html#pricing-data" class="block px-3 py-2 rounded-lg text-[var(--muted)] hover:text-white pl-6">Pricing</a>
-        <a href="fixed-income.html#municipal" class="block px-3 py-2 rounded-lg text-[var(--muted)] hover:text-white pl-6">Municipal</a>
         <p class="px-3 pt-2 pb-1 text-xs font-semibold uppercase tracking-wider" style="color:rgba(152,162,179,.5);">Regulatory Products</p>
         <a href="regulatory-intelligence.html#erisa" class="block px-3 py-2 rounded-lg pl-6" style="color:var(--muted)">ERISA Portfolio Analytics</a>
         <a href="regulatory-intelligence.html#solvency-ma" class="block px-3 py-2 rounded-lg pl-6" style="color:var(--muted)">Solvency UK Matching Adjustment</a>
@@ -162,7 +157,7 @@
             <p class="text-lg leading-relaxed mb-6" style="color:var(--muted)">Structured access to reference data: ISINs, LEIs, ratings, instrument classification, and issuer hierarchies. REST and streaming endpoints built for real-time and batch consumption at institutional scale.</p>
             <ul class="space-y-3 mb-6">
               <li class="flex gap-3 items-start"><svg class="text-cyan-400 flex-shrink-0 mt-0.5" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg><span class="text-sm" style="color:var(--muted)">REST &amp; streaming endpoints with JSON / FIX format support</span></li>
-              <li class="flex gap-3 items-start"><svg class="text-cyan-400 flex-shrink-0 mt-0.5" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg><span class="text-sm" style="color:var(--muted)">ISIN, CUSIP, LEI, FIGI, SEDOL identifier coverage</span></li>
+              <li class="flex gap-3 items-start"><svg class="text-cyan-400 flex-shrink-0 mt-0.5" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg><span class="text-sm" style="color:var(--muted)">ISIN, LEI, FIGI identifier coverage</span></li>
               <li class="flex gap-3 items-start"><svg class="text-cyan-400 flex-shrink-0 mt-0.5" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg><span class="text-sm" style="color:var(--muted)">Cross-asset class instrument classification and issuer hierarchies</span></li>
               <li class="flex gap-3 items-start"><svg class="text-cyan-400 flex-shrink-0 mt-0.5" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg><span class="text-sm" style="color:var(--muted)">Institutional-grade SLAs with 99.9% uptime guarantee</span></li>
               <li class="flex gap-3 items-start"><svg class="text-cyan-400 flex-shrink-0 mt-0.5" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg><span class="text-sm" style="color:var(--muted)">API key management and role-based access control</span></li>
