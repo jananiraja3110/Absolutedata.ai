@@ -60,15 +60,13 @@
         <span class="font-semibold tracking-tight text-white">Absolute Data</span>
       </a>
       <div class="hidden md:flex items-center gap-1">
-        <a href="index.html" class="nav-link px-3 py-2 rounded-lg text-sm text-[var(--muted)]">Home</a>
-        <a href="about.html" class="px-3 py-2 rounded-lg text-sm font-medium text-white">About</a>
-        <!-- Products dropdown -->
+        <a href="index.html" class="nav-link px-3 py-2 rounded-lg text-sm" style="color:var(--muted)">Home</a>
+        <a href="about.html" class="nav-link px-3 py-2 rounded-lg text-sm" style="color:var(--text)">About</a>
+
+        <!-- Fixed Income dropdown -->
         <div class="nav-dropdown">
-          <button class="nav-dropdown-btn" id="ddProducts">
-            Products
-            <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg>
-          </button>
-          <div class="nav-dropdown-menu" id="menuProducts" style="min-width:300px">
+          <button class="nav-dropdown-btn" id="ddFixedIncome" style="color:var(--muted)">Fixed Income <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg></button>
+          <div class="nav-dropdown-menu" id="menuFixedIncome" style="min-width:280px">
             <span class="menu-label">Fixed Income</span>
             <a href="data-services.html#reference-api" class="dd-item">
               <span class="icon" style="background:rgba(34,211,238,0.18);box-shadow:0 0 0 1px rgba(34,211,238,0.35)"><svg style="color:#67e8f9" width="17" height="17" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M4 6h16M4 10h16M4 14h10"/></svg></span>
@@ -86,7 +84,14 @@
               <span class="icon" style="background:rgba(34,211,238,0.18);box-shadow:0 0 0 1px rgba(34,211,238,0.35)"><svg style="color:#67e8f9" width="17" height="17" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg></span>
               <span class="dd-text"><span class="dd-title">Municipal</span><span class="dd-desc">Muni bond data across GSAC &amp; securitised products</span></span>
             </a>
-            <span class="menu-label" style="margin-top:8px">Regulatory Products</span>
+          </div>
+        </div>
+
+        <!-- Regulatory Products dropdown -->
+        <div class="nav-dropdown">
+          <button class="nav-dropdown-btn" id="ddRegProducts" style="color:var(--muted)">Regulatory Products <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg></button>
+          <div class="nav-dropdown-menu" id="menuRegProducts" style="min-width:280px">
+            <span class="menu-label">Regulatory Products</span>
             <a href="regulatory-intelligence.html#erisa" class="dd-item">
               <span class="icon" style="background:rgba(251,191,36,0.18);box-shadow:0 0 0 1px rgba(251,191,36,0.35)"><svg style="color:#fcd34d" width="17" height="17" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"/></svg></span>
               <span class="dd-text"><span class="dd-title">ERISA Portfolio Analytics</span><span class="dd-desc">Plan asset classification &amp; 5500 reporting data</span></span>
@@ -101,19 +106,8 @@
             </a>
           </div>
         </div>
-        </div>
-        </div>
-        <div class="nav-dropdown">
-          <button class="nav-dropdown-btn" id="ddData">Data Services <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg></button>
-          <div class="nav-dropdown-menu" id="menuData" style="min-width:280px">
-            <span class="menu-label">Data Services</span>
-            <a href="data-services.html#reference-api" class="dd-item"><span class="icon" style="background:rgba(34,211,238,0.18);box-shadow:0 0 0 1px rgba(34,211,238,0.35)"><svg style="color:#67e8f9" width="17" height="17" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/></svg></span><span class="dd-text"><span class="dd-title">Reference Data MCP</span><span class="dd-desc">ISINs, LEIs, ratings &amp; instrument classification</span></span></a>
-            <a href="data-services.html#pricing-data" class="dd-item"><span class="icon" style="background:rgba(34,211,238,0.18);box-shadow:0 0 0 1px rgba(34,211,238,0.35)"><svg style="color:#67e8f9" width="17" height="17" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M3 3v18h18"/><path d="M7 16l4-4 4 4 4-6"/></svg></span><span class="dd-text"><span class="dd-title">Pricing Data MCP</span><span class="dd-desc">EOD &amp; intraday fixed income pricing feeds</span></span></a>
-            <a href="data-services.html#corporate-action" class="dd-item"><span class="icon" style="background:rgba(34,211,238,0.18);box-shadow:0 0 0 1px rgba(34,211,238,0.35)"><svg style="color:#67e8f9" width="17" height="17" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M4 4h16v16H4z"/><path d="M9 4v16M15 4v16M4 9h16M4 15h16"/></svg></span><span class="dd-text"><span class="dd-title">Corporate Actions MCP</span><span class="dd-desc">Automated event capture &amp; entitlement processing</span></span></a>
-          </div>
-        </div>
-        </div>
-        <a href="contact.html" class="nav-link px-3 py-2 rounded-lg text-sm text-[var(--muted)]">Contact</a>
+
+        <a href="contact.html" class="nav-link px-3 py-2 rounded-lg text-sm" style="color:var(--muted)">Contact</a>
         <a href="contact.html" class="ml-3 btn-primary px-4 py-2 rounded-xl text-sm font-medium text-white">Get in Touch</a>
       </div>
       <button id="menuBtn" class="md:hidden h-10 w-10 rounded-lg border border-white/10 flex items-center justify-center text-[var(--muted)] hover:text-white" aria-label="Open menu">
@@ -122,22 +116,17 @@
     </nav>
     <div id="mobileMenu" class="hidden md:hidden border-t border-white/5" style="background: var(--bg);">
       <div class="px-6 py-3 space-y-1">
-        <a href="index.html" class="block px-3 py-2 rounded-lg text-[var(--muted)] hover:text-white">Home</a>
-        <p class="px-3 pt-2 pb-1 text-xs font-semibold uppercase tracking-wider" style="color:rgba(152,162,179,.5);">Products</p>
-        <p class="px-3 pt-1 pb-0.5 text-xs font-semibold uppercase tracking-wider" style="color:rgba(152,162,179,.3);font-size:.6rem">Fixed Income</p>
+        <a href="index.html" class="block px-3 py-2 rounded-lg hover:text-white" style="color:var(--muted)">Home</a>
+        <a href="about.html" class="block px-3 py-2 rounded-lg hover:text-white" style="color:var(--muted)">About</a>
+        <p class="px-3 pt-2 pb-1 text-xs font-semibold uppercase tracking-wider" style="color:rgba(152,162,179,.5);">Fixed Income</p>
         <a href="data-services.html#reference-api" class="block px-3 py-2 rounded-lg text-[var(--muted)] hover:text-white pl-6">Reference Data</a>
         <a href="data-services.html#corporate-action" class="block px-3 py-2 rounded-lg text-[var(--muted)] hover:text-white pl-6">Corporate Actions</a>
         <a href="data-services.html#pricing-data" class="block px-3 py-2 rounded-lg text-[var(--muted)] hover:text-white pl-6">Pricing</a>
         <a href="fixed-income.html" class="block px-3 py-2 rounded-lg text-[var(--muted)] hover:text-white pl-6">Municipal</a>
-        <p class="px-3 pt-1 pb-0.5 text-xs font-semibold uppercase tracking-wider" style="color:rgba(152,162,179,.3);font-size:.6rem">Regulatory Products</p>
+        <p class="px-3 pt-2 pb-1 text-xs font-semibold uppercase tracking-wider" style="color:rgba(152,162,179,.5);">Regulatory Products</p>
         <a href="regulatory-intelligence.html#erisa" class="block px-3 py-2 rounded-lg pl-6" style="color:var(--muted)">ERISA Portfolio Analytics</a>
         <a href="regulatory-intelligence.html#solvency-ma" class="block px-3 py-2 rounded-lg pl-6" style="color:var(--muted)">Solvency UK Matching Adjustment</a>
         <a href="regulatory-intelligence.html#lei-mapping" class="block px-3 py-2 rounded-lg pl-6" style="color:var(--muted)">LEI &amp; Instrument Mapping</a>
-        <p class="px-3 pt-2 pb-1 text-xs font-semibold uppercase tracking-wider" style="color:rgba(152,162,179,.5);">Data Services</p>
-        <a href="data-services.html#reference-api" class="block px-3 py-2 rounded-lg text-[var(--muted)] hover:text-white pl-6">Reference Data MCP</a>
-        <a href="data-services.html#pricing-data" class="block px-3 py-2 rounded-lg text-[var(--muted)] hover:text-white pl-6">Pricing Data MCP</a>
-        <a href="data-services.html#corporate-action" class="block px-3 py-2 rounded-lg text-[var(--muted)] hover:text-white pl-6">Corporate Actions MCP</a>
-        <a href="about.html" class="block px-3 py-2 rounded-lg text-white font-medium">About</a>
         <a href="contact.html" class="block px-3 py-2 rounded-lg text-[var(--muted)] hover:text-white">Contact</a>
       </div>
     </div>
