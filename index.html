@@ -153,7 +153,7 @@
   <main>
     <!-- HERO -->
     <section class="relative min-h-screen flex items-center overflow-hidden pt-20">
-      <canvas id="dataCanvas" class="absolute inset-0 w-full h-full pointer-events-none" style="opacity:.38"></canvas>
+      <canvas id="particleCanvas" class="absolute inset-0 w-full h-full pointer-events-none" style="opacity:.55"></canvas>
       <div class="absolute inset-0 pointer-events-none">
         <div class="parallax-blob absolute -top-32 -left-20 h-96 w-96 rounded-full bg-cyan-400/10 blur-3xl" data-speed="0.3"></div>
         <div class="parallax-blob absolute -bottom-32 -right-20 h-96 w-96 rounded-full bg-violet-500/10 blur-3xl" data-speed="0.5"></div>
@@ -431,49 +431,31 @@
       });
     });
 
-    // Data stream background
+    // Particle field
     (function(){
-      const canvas = document.getElementById('dataCanvas');
+      const canvas = document.getElementById('particleCanvas');
       if (!canvas) return;
       const ctx = canvas.getContext('2d');
-      let W, H, cols, drops;
-      const COL_W = 52;
-      const FONT_SIZE = 11;
-      // Financial-style values: yields, spreads, prices
-      const chars = ['1.','0.','2.','4.','3.','0.52','1.04','0.87','1.23','4.25','3.80','0.34','99.','100.','98.','97.','101.','1.5%','2.1%','0.9%','AAA','AA+','A+','BBB','GBP','USD','EUR','bp','bps','MA','PRA','SCR'];
-      function resize(){
-        W = canvas.width = canvas.offsetWidth;
-        H = canvas.height = canvas.offsetHeight;
-        cols = Math.floor(W / COL_W);
-        drops = Array.from({length: cols}, () => Math.random() * -H / FONT_SIZE);
-      }
+      let W, H, particles;
+      function resize(){ W = canvas.width = canvas.offsetWidth; H = canvas.height = canvas.offsetHeight; }
+      function mkP(){ return { x: Math.random()*W, y: Math.random()*H, r: Math.random()*1.4+.4, vx: (Math.random()-.5)*.3, vy: (Math.random()-.5)*.3, a: Math.random()*.55+.2 }; }
+      function init(){ resize(); particles = Array.from({length:90}, mkP); }
       function draw(){
-        // fade trail
-        ctx.fillStyle = 'rgba(11,15,21,0.045)';
-        ctx.fillRect(0, 0, W, H);
-        cols = Math.floor(W / COL_W);
-        if (drops.length !== cols) drops = Array.from({length: cols}, () => Math.random() * -H / FONT_SIZE);
-        for (let i = 0; i < cols; i++){
-          const text = chars[Math.floor(Math.random() * chars.length)];
-          const x = i * COL_W + 4;
-          const y = drops[i] * FONT_SIZE;
-          // leading character brighter
-          ctx.fillStyle = 'rgba(167,230,255,0.75)';
-          ctx.font = `${FONT_SIZE}px "JetBrains Mono", "Courier New", monospace`;
-          ctx.fillText(text, x, y);
-          // trail character slightly dimmer
-          if (drops[i] > 2) {
-            const prev = chars[Math.floor(Math.random() * chars.length)];
-            ctx.fillStyle = 'rgba(110,231,255,0.2)';
-            ctx.fillText(prev, x, y - FONT_SIZE * 2);
-          }
-          if (y > H && Math.random() > 0.975) drops[i] = 0;
-          drops[i] += 0.38;
+        ctx.clearRect(0,0,W,H);
+        particles.forEach(p=>{
+          p.x+=p.vx; p.y+=p.vy;
+          if(p.x<0)p.x=W; if(p.x>W)p.x=0; if(p.y<0)p.y=H; if(p.y>H)p.y=0;
+          ctx.beginPath(); ctx.arc(p.x,p.y,p.r,0,Math.PI*2);
+          ctx.fillStyle=`rgba(110,231,255,${p.a})`; ctx.fill();
+        });
+        for(let i=0;i<particles.length;i++) for(let j=i+1;j<particles.length;j++){
+          const dx=particles[i].x-particles[j].x, dy=particles[i].y-particles[j].y, d=Math.sqrt(dx*dx+dy*dy);
+          if(d<80){ ctx.beginPath(); ctx.moveTo(particles[i].x,particles[i].y); ctx.lineTo(particles[j].x,particles[j].y); ctx.strokeStyle=`rgba(110,231,255,${.12*(1-d/80)})`; ctx.lineWidth=.5; ctx.stroke(); }
         }
         requestAnimationFrame(draw);
       }
-      window.addEventListener('resize', resize);
-      resize(); draw();
+      window.addEventListener('resize', ()=>{ resize(); });
+      init(); draw();
     })();
   </script>
 </body>
