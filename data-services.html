@@ -141,8 +141,8 @@
         <!-- Sub-nav pills -->
         <div class="reveal mt-8 flex flex-wrap gap-3">
           <a href="#reference-api" class="px-4 py-2 rounded-full text-sm font-medium bg-cyan-400/10 ring-1 ring-cyan-400/30 text-cyan-200 hover:bg-cyan-400/20 transition-colors">Reference Data</a>
-          <a href="#pricing-data" class="px-4 py-2 rounded-full text-sm font-medium bg-cyan-400/10 ring-1 ring-cyan-400/30 text-cyan-200 hover:bg-cyan-400/20 transition-colors">Pricing Data</a>
           <a href="#corporate-action" class="px-4 py-2 rounded-full text-sm font-medium bg-cyan-400/10 ring-1 ring-cyan-400/30 text-cyan-200 hover:bg-cyan-400/20 transition-colors">Corporate Actions</a>
+          <a href="#pricing-data" class="px-4 py-2 rounded-full text-sm font-medium bg-cyan-400/10 ring-1 ring-cyan-400/30 text-cyan-200 hover:bg-cyan-400/20 transition-colors">Pricing Data</a>
           <a href="#municipal" class="px-4 py-2 rounded-full text-sm font-medium bg-cyan-400/10 ring-1 ring-cyan-400/30 text-cyan-200 hover:bg-cyan-400/20 transition-colors">Municipal</a>
         </div>
       </div>
@@ -195,54 +195,6 @@ Authorization: Bearer {api_key}
       </div>
     </section>
 
-    <!-- PRICING DATA -->
-    <section id="pricing-data" class="service-anchor py-16 border-t border-white/5">
-      <div class="max-w-6xl mx-auto px-6">
-        <div class="reveal flex items-center gap-4 mb-8">
-          <div class="inline-flex h-12 w-12 items-center justify-center rounded-xl bg-cyan-400/10 ring-1 ring-cyan-400/20 flex-shrink-0">
-            <svg class="text-cyan-300" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M3 3v18h18"/><path d="M7 16l4-4 4 4 4-6"/></svg>
-          </div>
-          <div>
-            <span class="text-xs font-semibold tracking-widest uppercase text-cyan-200/70 bg-cyan-400/10 ring-1 ring-cyan-400/20 px-2 py-0.5 rounded-full">02</span>
-            <h2 class="text-3xl font-extrabold mt-1">Pricing Data</h2>
-          </div>
-        </div>
-        <div class="reveal grid md:grid-cols-2 gap-8">
-          <div>
-            <p class="text-lg leading-relaxed mb-6" style="color:var(--muted)">End-of-day and intraday pricing for fixed income, structured credit, and illiquid assets. Normalised, validated, and MA-eligible supporting Solvency UK valuation requirements and internal risk models.</p>
-            <ul class="space-y-3 mb-6">
-              <li class="flex gap-3 items-start"><svg class="text-cyan-400 flex-shrink-0 mt-0.5" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg><span class="text-sm" style="color:var(--muted)">End-of-day and intraday price feeds</span></li>
-              <li class="flex gap-3 items-start"><svg class="text-cyan-400 flex-shrink-0 mt-0.5" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg><span class="text-sm" style="color:var(--muted)">Illiquid and structured credit asset coverage</span></li>
-              <li class="flex gap-3 items-start"><svg class="text-cyan-400 flex-shrink-0 mt-0.5" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg><span class="text-sm" style="color:var(--muted)">Multi-source price validation and consensus pricing</span></li>
-              <li class="flex gap-3 items-start"><svg class="text-cyan-400 flex-shrink-0 mt-0.5" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg><span class="text-sm" style="color:var(--muted)">MA-eligible instrument tagging for Solvency UK portfolios</span></li>
-              <li class="flex gap-3 items-start"><svg class="text-cyan-400 flex-shrink-0 mt-0.5" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg><span class="text-sm" style="color:var(--muted)">Historical price archives for backtesting and audit</span></li>
-            </ul>
-            <a href="contact.html" class="btn-primary inline-flex items-center gap-2 px-5 py-2.5 rounded-xl text-sm font-medium text-white">
-              Request Pricing Access <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-            </a>
-          </div>
-          <div class="grid grid-cols-2 gap-4">
-            <div class="p-5 rounded-xl ring-1 ring-white/8" style="background:var(--bg-soft)">
-              <div class="text-2xl font-bold gradient-text mb-1">EOD</div>
-              <p class="text-xs" style="color:var(--muted)">End-of-day pricing delivered within 30 mins of market close</p>
-            </div>
-            <div class="p-5 rounded-xl ring-1 ring-white/8" style="background:var(--bg-soft)">
-              <div class="text-2xl font-bold gradient-text mb-1">4M+</div>
-              <p class="text-xs" style="color:var(--muted)">Instruments priced across global fixed income markets</p>
-            </div>
-            <div class="p-5 rounded-xl ring-1 ring-white/8" style="background:var(--bg-soft)">
-              <div class="text-2xl font-bold gradient-text mb-1">99.9%</div>
-              <p class="text-xs" style="color:var(--muted)">Data delivery uptime SLA</p>
-            </div>
-            <div class="p-5 rounded-xl ring-1 ring-white/8" style="background:var(--bg-soft)">
-              <div class="text-2xl font-bold gradient-text mb-1">MA</div>
-              <p class="text-xs" style="color:var(--muted)">Solvency UK MA-eligible tagging on all applicable instruments</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
     <!-- CORPORATE ACTION -->
     <section id="corporate-action" class="service-anchor py-16 border-t border-white/5" style="background:var(--bg-soft)">
       <div class="max-w-6xl mx-auto px-6">
@@ -251,7 +203,7 @@ Authorization: Bearer {api_key}
             <svg class="text-cyan-300" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M4 4h16v16H4z"/><path d="M9 4v16M15 4v16M4 9h16M4 15h16"/></svg>
           </div>
           <div>
-            <span class="text-xs font-semibold tracking-widest uppercase text-cyan-200/70 bg-cyan-400/10 ring-1 ring-cyan-400/20 px-2 py-0.5 rounded-full">03</span>
+            <span class="text-xs font-semibold tracking-widest uppercase text-cyan-200/70 bg-cyan-400/10 ring-1 ring-cyan-400/20 px-2 py-0.5 rounded-full">02</span>
             <h2 class="text-3xl font-extrabold mt-1">Corporate Actions</h2>
           </div>
         </div>
@@ -285,6 +237,54 @@ Authorization: Bearer {api_key}
             <div class="p-4 rounded-xl ring-1 ring-white/8" style="background:rgba(110,231,255,0.04)">
               <p class="text-xs font-semibold uppercase tracking-wider text-cyan-300 mb-1">Maturity &amp; Redemption</p>
               <p class="text-xs" style="color:var(--muted)">Final redemption events with full settlement details and MA portfolio lifecycle closure notifications.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PRICING DATA -->
+    <section id="pricing-data" class="service-anchor py-16 border-t border-white/5">
+      <div class="max-w-6xl mx-auto px-6">
+        <div class="reveal flex items-center gap-4 mb-8">
+          <div class="inline-flex h-12 w-12 items-center justify-center rounded-xl bg-cyan-400/10 ring-1 ring-cyan-400/20 flex-shrink-0">
+            <svg class="text-cyan-300" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M3 3v18h18"/><path d="M7 16l4-4 4 4 4-6"/></svg>
+          </div>
+          <div>
+            <span class="text-xs font-semibold tracking-widest uppercase text-cyan-200/70 bg-cyan-400/10 ring-1 ring-cyan-400/20 px-2 py-0.5 rounded-full">03</span>
+            <h2 class="text-3xl font-extrabold mt-1">Pricing Data</h2>
+          </div>
+        </div>
+        <div class="reveal grid md:grid-cols-2 gap-8">
+          <div>
+            <p class="text-lg leading-relaxed mb-6" style="color:var(--muted)">End-of-day and intraday pricing for fixed income, structured credit, and illiquid assets. Normalised, validated, and MA-eligible supporting Solvency UK valuation requirements and internal risk models.</p>
+            <ul class="space-y-3 mb-6">
+              <li class="flex gap-3 items-start"><svg class="text-cyan-400 flex-shrink-0 mt-0.5" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg><span class="text-sm" style="color:var(--muted)">End-of-day and intraday price feeds</span></li>
+              <li class="flex gap-3 items-start"><svg class="text-cyan-400 flex-shrink-0 mt-0.5" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg><span class="text-sm" style="color:var(--muted)">Illiquid and structured credit asset coverage</span></li>
+              <li class="flex gap-3 items-start"><svg class="text-cyan-400 flex-shrink-0 mt-0.5" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg><span class="text-sm" style="color:var(--muted)">Multi-source price validation and consensus pricing</span></li>
+              <li class="flex gap-3 items-start"><svg class="text-cyan-400 flex-shrink-0 mt-0.5" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg><span class="text-sm" style="color:var(--muted)">MA-eligible instrument tagging for Solvency UK portfolios</span></li>
+              <li class="flex gap-3 items-start"><svg class="text-cyan-400 flex-shrink-0 mt-0.5" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg><span class="text-sm" style="color:var(--muted)">Historical price archives for backtesting and audit</span></li>
+            </ul>
+            <a href="contact.html" class="btn-primary inline-flex items-center gap-2 px-5 py-2.5 rounded-xl text-sm font-medium text-white">
+              Request Pricing Access <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+          </div>
+          <div class="grid grid-cols-2 gap-4">
+            <div class="p-5 rounded-xl ring-1 ring-white/8" style="background:var(--bg-soft)">
+              <div class="text-2xl font-bold gradient-text mb-1">EOD</div>
+              <p class="text-xs" style="color:var(--muted)">End-of-day pricing delivered within 30 mins of market close</p>
+            </div>
+            <div class="p-5 rounded-xl ring-1 ring-white/8" style="background:var(--bg-soft)">
+              <div class="text-2xl font-bold gradient-text mb-1">4M+</div>
+              <p class="text-xs" style="color:var(--muted)">Instruments priced across global fixed income markets</p>
+            </div>
+            <div class="p-5 rounded-xl ring-1 ring-white/8" style="background:var(--bg-soft)">
+              <div class="text-2xl font-bold gradient-text mb-1">99.9%</div>
+              <p class="text-xs" style="color:var(--muted)">Data delivery uptime SLA</p>
+            </div>
+            <div class="p-5 rounded-xl ring-1 ring-white/8" style="background:var(--bg-soft)">
+              <div class="text-2xl font-bold gradient-text mb-1">MA</div>
+              <p class="text-xs" style="color:var(--muted)">Solvency UK MA-eligible tagging on all applicable instruments</p>
             </div>
           </div>
         </div>
