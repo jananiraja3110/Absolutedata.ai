@@ -288,47 +288,103 @@
       </div>
     </section>
 
-    <!-- PRODUCT TEASERS -->
+    <!-- PIPELINE ARCHITECTURE -->
     <section class="py-20 border-t border-white/5" style="background: var(--bg-soft);">
       <div class="max-w-6xl mx-auto px-6">
-        <div class="reveal text-center mb-12">
-          <h2 class="text-3xl md:text-4xl font-extrabold">Powering Your Fixed Income Strategy</h2>
-          <p class="mt-3 text-[var(--muted)] max-w-xl mx-auto">Specialised data solutions designed for the demands of institutional finance.</p>
+        <div class="reveal text-center mb-14">
+          <span class="inline-flex items-center gap-2 text-xs font-bold tracking-widest uppercase text-cyan-100 bg-cyan-400/15 ring-1 ring-cyan-400/40 px-3 py-1 rounded-full mb-4">Data Pipeline</span>
+          <h2 class="text-3xl md:text-4xl font-extrabold">How Our Data Flows</h2>
+          <p class="mt-3 text-[var(--muted)] max-w-xl mx-auto font-medium">From raw market sources to clean, validated, institution-ready data — powered by GenAI.</p>
         </div>
-        <div class="grid md:grid-cols-3 gap-6">
-          <!-- Fixed Income -->
-          <a href="fixed-income.html" class="reveal card rounded-2xl p-6 ring-1 ring-white/10 hover:ring-cyan-400/30 block" style="background: rgba(15,22,35,.7);">
-            <div class="inline-flex h-11 w-11 items-center justify-center rounded-xl bg-cyan-400/10 ring-1 ring-cyan-400/20 mb-4">
-              <svg class="text-cyan-300" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+
+        <!-- Pipeline: horizontal on md+, vertical on mobile -->
+        <div class="reveal flex flex-col md:flex-row items-center justify-center gap-0">
+
+          <!-- Node 1: Issuer Announcements -->
+          <div class="flex flex-col md:flex-row items-center">
+            <div class="flex flex-col items-center text-center w-36">
+              <div class="h-14 w-14 rounded-2xl flex items-center justify-center mb-3 ring-1 ring-cyan-400/30" style="background:rgba(34,211,238,0.12)">
+                <svg style="color:#67e8f9" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6 6 0 10-12 0v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"/></svg>
+              </div>
+              <p class="text-xs font-bold text-white leading-snug">Issuer<br/>Announcements</p>
+              <p class="text-xs text-[var(--muted)] mt-1 leading-snug">Corporate filings &amp; notices</p>
             </div>
-            <h3 class="text-lg font-semibold mb-2">Fixed Income</h3>
-            <p class="text-sm text-[var(--muted)] leading-relaxed">Comprehensive reference data and corporate actions for global bond markets.</p>
-            <span class="mt-4 inline-flex items-center gap-1 text-sm text-cyan-300">Learn more <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
-          </a>
-          <!-- Regulatory -->
-          <a href="regulatory.html" class="reveal card rounded-2xl p-6 ring-1 ring-white/10 hover:ring-violet-400/30 block" style="background: rgba(15,22,35,.7);">
-            <div class="inline-flex h-11 w-11 items-center justify-center rounded-xl bg-violet-500/10 ring-1 ring-violet-500/20 mb-4">
-              <svg class="text-violet-300" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M12 2l9 4v6c0 5-3.5 9-9 10-5.5-1-9-5-9-10V6l9-4z"/></svg>
+            <!-- Arrow right (md) / down (mobile) -->
+            <div class="my-3 md:my-0 md:mx-3 flex items-center justify-center">
+              <svg class="hidden md:block" style="color:rgba(110,231,255,.4)" width="28" height="16" fill="none" viewBox="0 0 28 16"><path d="M0 8h24M18 2l6 6-6 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              <svg class="md:hidden" style="color:rgba(110,231,255,.4)" width="16" height="28" fill="none" viewBox="0 0 16 28"><path d="M8 0v24M2 18l6 6 6-6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
             </div>
-            <h3 class="text-lg font-semibold mb-2">Regulatory</h3>
-            <p class="text-sm text-[var(--muted)] leading-relaxed">Solvency UK / Matching Adjustment data infrastructure and analytical tooling for PRA compliance.</p>
-            <span class="mt-4 inline-flex items-center gap-1 text-sm text-violet-300">Learn more <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
-          </a>
-          <!-- Data Services -->
-          <a href="data-services.html" class="reveal card rounded-2xl p-6 ring-1 ring-white/10 hover:ring-cyan-400/30 block" style="background: rgba(15,22,35,.7);">
-            <div class="inline-flex h-11 w-11 items-center justify-center rounded-xl bg-cyan-400/10 ring-1 ring-cyan-400/20 mb-4">
-              <svg class="text-cyan-300" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 5v14c0 1.66 4.03 3 9 3s9-1.34 9-3V5"/><path d="M3 12c0 1.66 4.03 3 9 3s9-1.34 9-3"/></svg>
+          </div>
+
+          <!-- Node 2: Exchange Filings -->
+          <div class="flex flex-col md:flex-row items-center">
+            <div class="flex flex-col items-center text-center w-36">
+              <div class="h-14 w-14 rounded-2xl flex items-center justify-center mb-3 ring-1 ring-cyan-400/30" style="background:rgba(34,211,238,0.12)">
+                <svg style="color:#67e8f9" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M9 12h6M9 16h6M9 8h6M5 3h14a2 2 0 012 2v14a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2z"/></svg>
+              </div>
+              <p class="text-xs font-bold text-white leading-snug">Exchange<br/>Filings</p>
+              <p class="text-xs text-[var(--muted)] mt-1 leading-snug">Regulatory &amp; exchange data</p>
             </div>
-            <h3 class="text-lg font-semibold mb-2">Data Services</h3>
-            <p class="text-sm text-[var(--muted)] leading-relaxed">Reference Data MCP, Pricing Data MCP, and Corporate Actions MCP delivery for institutional workflows.</p>
-            <span class="mt-4 inline-flex items-center gap-1 text-sm text-cyan-300">Learn more <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
-          </a>
-        </div>
-        <div class="text-center mt-10 reveal">
-          <a href="products.html" class="btn-primary inline-flex items-center gap-2 px-6 py-3 rounded-xl text-white font-medium">
-            View All Products
-            <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-          </a>
+            <div class="my-3 md:my-0 md:mx-3 flex items-center justify-center">
+              <svg class="hidden md:block" style="color:rgba(110,231,255,.4)" width="28" height="16" fill="none" viewBox="0 0 28 16"><path d="M0 8h24M18 2l6 6-6 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              <svg class="md:hidden" style="color:rgba(110,231,255,.4)" width="16" height="28" fill="none" viewBox="0 0 16 28"><path d="M8 0v24M2 18l6 6 6-6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+          </div>
+
+          <!-- Node 3: GenAI Processing Layer (highlighted) -->
+          <div class="flex flex-col md:flex-row items-center">
+            <div class="flex flex-col items-center text-center w-36">
+              <div class="h-14 w-14 rounded-2xl flex items-center justify-center mb-3 ring-2 ring-violet-400/60" style="background:rgba(167,139,250,0.18);box-shadow:0 0 24px rgba(167,139,250,.25)">
+                <svg style="color:#c4b5fd" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M12 2a4 4 0 014 4v1h1a3 3 0 010 6h-1v1a4 4 0 01-8 0v-1H7a3 3 0 010-6h1V6a4 4 0 014-4z"/></svg>
+              </div>
+              <p class="text-xs font-bold leading-snug" style="color:#c4b5fd">GenAI<br/>Processing Layer</p>
+              <p class="text-xs text-[var(--muted)] mt-1 leading-snug">Extraction, enrichment &amp; classification</p>
+            </div>
+            <div class="my-3 md:my-0 md:mx-3 flex items-center justify-center">
+              <svg class="hidden md:block" style="color:rgba(110,231,255,.4)" width="28" height="16" fill="none" viewBox="0 0 28 16"><path d="M0 8h24M18 2l6 6-6 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              <svg class="md:hidden" style="color:rgba(110,231,255,.4)" width="16" height="28" fill="none" viewBox="0 0 16 28"><path d="M8 0v24M2 18l6 6 6-6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+          </div>
+
+          <!-- Node 4: Validation Engine -->
+          <div class="flex flex-col md:flex-row items-center">
+            <div class="flex flex-col items-center text-center w-36">
+              <div class="h-14 w-14 rounded-2xl flex items-center justify-center mb-3 ring-1 ring-cyan-400/30" style="background:rgba(34,211,238,0.12)">
+                <svg style="color:#67e8f9" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M9 12l2 2 4-4M12 2l9 4v6c0 5-3.5 9-9 10-5.5-1-9-5-9-10V6l9-4z"/></svg>
+              </div>
+              <p class="text-xs font-bold text-white leading-snug">Validation<br/>Engine</p>
+              <p class="text-xs text-[var(--muted)] mt-1 leading-snug">Quality checks &amp; reconciliation</p>
+            </div>
+            <div class="my-3 md:my-0 md:mx-3 flex items-center justify-center">
+              <svg class="hidden md:block" style="color:rgba(110,231,255,.4)" width="28" height="16" fill="none" viewBox="0 0 28 16"><path d="M0 8h24M18 2l6 6-6 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              <svg class="md:hidden" style="color:rgba(110,231,255,.4)" width="16" height="28" fill="none" viewBox="0 0 16 28"><path d="M8 0v24M2 18l6 6 6-6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+          </div>
+
+          <!-- Node 5: Reference Data API -->
+          <div class="flex flex-col md:flex-row items-center">
+            <div class="flex flex-col items-center text-center w-36">
+              <div class="h-14 w-14 rounded-2xl flex items-center justify-center mb-3 ring-1 ring-cyan-400/30" style="background:rgba(34,211,238,0.12)">
+                <svg style="color:#67e8f9" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/></svg>
+              </div>
+              <p class="text-xs font-bold text-white leading-snug">Reference<br/>Data API</p>
+              <p class="text-xs text-[var(--muted)] mt-1 leading-snug">Clean, structured delivery</p>
+            </div>
+            <div class="my-3 md:my-0 md:mx-3 flex items-center justify-center">
+              <svg class="hidden md:block" style="color:rgba(110,231,255,.4)" width="28" height="16" fill="none" viewBox="0 0 28 16"><path d="M0 8h24M18 2l6 6-6 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              <svg class="md:hidden" style="color:rgba(110,231,255,.4)" width="16" height="28" fill="none" viewBox="0 0 16 28"><path d="M8 0v24M2 18l6 6 6-6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+          </div>
+
+          <!-- Node 6: Client Systems -->
+          <div class="flex flex-col items-center text-center w-36">
+            <div class="h-14 w-14 rounded-2xl flex items-center justify-center mb-3 ring-2 ring-cyan-400/50" style="background:rgba(34,211,238,0.18);box-shadow:0 0 24px rgba(34,211,238,.2)">
+              <svg style="color:#22d3ee" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+            </div>
+            <p class="text-xs font-bold leading-snug" style="color:#67e8f9">Client<br/>Systems</p>
+            <p class="text-xs text-[var(--muted)] mt-1 leading-snug">Asset managers, insurers &amp; pension funds</p>
+          </div>
+
         </div>
       </div>
     </section>
