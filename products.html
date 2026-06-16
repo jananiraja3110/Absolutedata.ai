@@ -41,6 +41,11 @@
     .nav-dropdown-menu a:hover, .nav-dropdown-menu a.active { background: rgba(255,255,255,.07); color: var(--text); }
     .nav-dropdown-menu a .icon { width: 32px; height: 32px; border-radius: 8px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
     .nav-dropdown-menu .menu-label { font-size: .67rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: rgba(152,162,179,.45); padding: 8px 14px 4px; display: block; }
+    .nav-dropdown-menu a.dd-item { align-items: flex-start; }
+    .dd-text { display: flex; flex-direction: column; gap: 1px; }
+    .dd-title { font-size: .875rem; font-weight: 600; color: var(--text); line-height: 1.3; }
+    .dd-desc { font-size: .75rem; color: var(--muted); line-height: 1.4; }
+    .nav-dropdown-menu a.dd-item .icon { margin-top: 2px; }
   </style>
 </head>
 <body class="antialiased">
@@ -57,29 +62,29 @@
         <a href="about.html" class="px-3 py-2 rounded-lg text-sm" style="color:var(--muted)">About</a>
         <div class="nav-dropdown">
           <button class="nav-dropdown-btn" id="ddProducts" style="color:var(--text)">Products <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg></button>
-          <div class="nav-dropdown-menu" id="menuProducts">
+          <div class="nav-dropdown-menu" id="menuProducts" style="min-width:280px">
             <span class="menu-label">Products</span>
-            <a href="fixed-income.html"><span class="icon" style="background:rgba(34,211,238,0.18);box-shadow:0 0 0 1px rgba(34,211,238,0.35)"><svg style="color:#67e8f9" width="17" height="17" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg></span>Fixed Income</a>
-            <a href="regulatory.html"><span class="icon" style="background:rgba(167,139,250,0.18);box-shadow:0 0 0 1px rgba(167,139,250,0.35)"><svg style="color:#c4b5fd" width="17" height="17" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M12 2l9 4v6c0 5-3.5 9-9 10-5.5-1-9-5-9-10V6l9-4z"/></svg></span>Regulatory</a>
+            <a href="fixed-income.html" class="dd-item"><span class="icon" style="background:rgba(34,211,238,0.18);box-shadow:0 0 0 1px rgba(34,211,238,0.35)"><svg style="color:#67e8f9" width="17" height="17" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg></span><span class="dd-text"><span class="dd-title">Fixed Income</span><span class="dd-desc">Bond reference data &amp; MA-eligible analytics</span></span></a>
+            <a href="regulatory.html" class="dd-item"><span class="icon" style="background:rgba(167,139,250,0.18);box-shadow:0 0 0 1px rgba(167,139,250,0.35)"><svg style="color:#c4b5fd" width="17" height="17" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M12 2l9 4v6c0 5-3.5 9-9 10-5.5-1-9-5-9-10V6l9-4z"/></svg></span><span class="dd-text"><span class="dd-title">Regulatory</span><span class="dd-desc">Solvency UK matching adjustment framework</span></span></a>
           </div>
         </div>
         <div class="nav-dropdown">
           <button class="nav-dropdown-btn" id="ddData">Data Services <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg></button>
-          <div class="nav-dropdown-menu" id="menuData">
+          <div class="nav-dropdown-menu" id="menuData" style="min-width:280px">
             <span class="menu-label">Data Services</span>
-            <a href="data-services.html#reference-api"><span class="icon" style="background:rgba(34,211,238,0.18);box-shadow:0 0 0 1px rgba(34,211,238,0.35)"><svg style="color:#67e8f9" width="17" height="17" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/></svg></span>Reference Data MCP</a>
-            <a href="data-services.html#pricing-data"><span class="icon" style="background:rgba(34,211,238,0.18);box-shadow:0 0 0 1px rgba(34,211,238,0.35)"><svg style="color:#67e8f9" width="17" height="17" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M3 3v18h18"/><path d="M7 16l4-4 4 4 4-6"/></svg></span>Pricing Data MCP</a>
-            <a href="data-services.html#corporate-action"><span class="icon" style="background:rgba(34,211,238,0.18);box-shadow:0 0 0 1px rgba(34,211,238,0.35)"><svg style="color:#67e8f9" width="17" height="17" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M4 4h16v16H4z"/><path d="M9 4v16M15 4v16M4 9h16M4 15h16"/></svg></span>Corporate Actions MCP</a>
+            <a href="data-services.html#reference-api" class="dd-item"><span class="icon" style="background:rgba(34,211,238,0.18);box-shadow:0 0 0 1px rgba(34,211,238,0.35)"><svg style="color:#67e8f9" width="17" height="17" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/></svg></span><span class="dd-text"><span class="dd-title">Reference Data MCP</span><span class="dd-desc">ISINs, LEIs, ratings &amp; instrument classification</span></span></a>
+            <a href="data-services.html#pricing-data" class="dd-item"><span class="icon" style="background:rgba(34,211,238,0.18);box-shadow:0 0 0 1px rgba(34,211,238,0.35)"><svg style="color:#67e8f9" width="17" height="17" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M3 3v18h18"/><path d="M7 16l4-4 4 4 4-6"/></svg></span><span class="dd-text"><span class="dd-title">Pricing Data MCP</span><span class="dd-desc">EOD &amp; intraday fixed income pricing feeds</span></span></a>
+            <a href="data-services.html#corporate-action" class="dd-item"><span class="icon" style="background:rgba(34,211,238,0.18);box-shadow:0 0 0 1px rgba(34,211,238,0.35)"><svg style="color:#67e8f9" width="17" height="17" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M4 4h16v16H4z"/><path d="M9 4v16M15 4v16M4 9h16M4 15h16"/></svg></span><span class="dd-text"><span class="dd-title">Corporate Actions MCP</span><span class="dd-desc">Automated event capture &amp; entitlement processing</span></span></a>
           </div>
         </div>
         <!-- RegIntelligence dropdown -->
         <div class="nav-dropdown">
           <button class="nav-dropdown-btn" id="ddRegIntel">RegIntelligence <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg></button>
-          <div class="nav-dropdown-menu" id="menuRegIntel" style="min-width:260px">
+          <div class="nav-dropdown-menu" id="menuRegIntel" style="min-width:280px">
             <span class="menu-label">RegIntelligence</span>
-            <a href="regulatory-intelligence.html#erisa"><span class="icon" style="background:rgba(251,191,36,0.18);box-shadow:0 0 0 1px rgba(251,191,36,0.35)"><svg style="color:#fcd34d" width="17" height="17" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"/></svg></span>ERISA Portfolio Analytics</a>
-            <a href="regulatory-intelligence.html#solvency-ma"><span class="icon" style="background:rgba(251,191,36,0.18);box-shadow:0 0 0 1px rgba(251,191,36,0.35)"><svg style="color:#fcd34d" width="17" height="17" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M12 2l9 4v6c0 5-3.5 9-9 10-5.5-1-9-5-9-10V6l9-4z"/></svg></span>Solvency UK Matching Adjustment</a>
-            <a href="regulatory-intelligence.html#lei-mapping"><span class="icon" style="background:rgba(251,191,36,0.18);box-shadow:0 0 0 1px rgba(251,191,36,0.35)"><svg style="color:#fcd34d" width="17" height="17" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"/></svg></span>LEI &amp; Instrument Mapping</a>
+            <a href="regulatory-intelligence.html#erisa" class="dd-item"><span class="icon" style="background:rgba(251,191,36,0.18);box-shadow:0 0 0 1px rgba(251,191,36,0.35)"><svg style="color:#fcd34d" width="17" height="17" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"/></svg></span><span class="dd-text"><span class="dd-title">ERISA Portfolio Analytics</span><span class="dd-desc">Plan asset classification &amp; 5500 reporting data</span></span></a>
+            <a href="regulatory-intelligence.html#solvency-ma" class="dd-item"><span class="icon" style="background:rgba(251,191,36,0.18);box-shadow:0 0 0 1px rgba(251,191,36,0.35)"><svg style="color:#fcd34d" width="17" height="17" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M12 2l9 4v6c0 5-3.5 9-9 10-5.5-1-9-5-9-10V6l9-4z"/></svg></span><span class="dd-text"><span class="dd-title">Solvency UK Matching Adjustment</span><span class="dd-desc">PRA eligibility attestation &amp; spread attribution</span></span></a>
+            <a href="regulatory-intelligence.html#lei-mapping" class="dd-item"><span class="icon" style="background:rgba(251,191,36,0.18);box-shadow:0 0 0 1px rgba(251,191,36,0.35)"><svg style="color:#fcd34d" width="17" height="17" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"/></svg></span><span class="dd-text"><span class="dd-title">LEI &amp; Instrument Mapping</span><span class="dd-desc">Cross-reference LEIs to ISIN, CUSIP, FIGI, SEDOL</span></span></a>
           </div>
         </div>
         <a href="contact.html" class="px-3 py-2 rounded-lg text-sm" style="color:var(--muted)">Contact</a>
