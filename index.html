@@ -152,7 +152,8 @@
 
   <main>
     <!-- HERO -->
-    <section class="relative min-h-screen flex items-center overflow-hidden grid-lines pt-20">
+    <section class="relative min-h-screen flex items-center overflow-hidden pt-20">
+      <canvas id="particleCanvas" class="absolute inset-0 w-full h-full pointer-events-none" style="opacity:.55"></canvas>
       <div class="absolute inset-0 pointer-events-none">
         <div class="parallax-blob absolute -top-32 -left-20 h-96 w-96 rounded-full bg-cyan-400/10 blur-3xl" data-speed="0.3"></div>
         <div class="parallax-blob absolute -bottom-32 -right-20 h-96 w-96 rounded-full bg-violet-500/10 blur-3xl" data-speed="0.5"></div>
@@ -429,6 +430,41 @@
         el.style.transform = `translateY(${sy * speed}px)`;
       });
     });
+
+    // Particle field
+    (function(){
+      const canvas = document.getElementById('particleCanvas');
+      if (!canvas) return;
+      const ctx = canvas.getContext('2d');
+      let W, H, particles;
+      const COUNT = 120;
+      function resize(){ W = canvas.width = canvas.offsetWidth; H = canvas.height = canvas.offsetHeight; }
+      function mkParticle(){ return { x: Math.random()*W, y: Math.random()*H, r: Math.random()*1.4+0.4, vx: (Math.random()-.5)*.25, vy: (Math.random()-.5)*.25, a: Math.random()*.6+.2 }; }
+      function init(){ resize(); particles = Array.from({length:COUNT}, mkParticle); }
+      function draw(){
+        ctx.clearRect(0,0,W,H);
+        particles.forEach(p=>{
+          p.x += p.vx; p.y += p.vy;
+          if(p.x<0) p.x=W; if(p.x>W) p.x=0;
+          if(p.y<0) p.y=H; if(p.y>H) p.y=0;
+          ctx.beginPath();
+          ctx.arc(p.x, p.y, p.r, 0, Math.PI*2);
+          ctx.fillStyle = `rgba(110,231,255,${p.a})`;
+          ctx.fill();
+        });
+        // draw faint connecting lines between nearby particles
+        for(let i=0;i<particles.length;i++){
+          for(let j=i+1;j<particles.length;j++){
+            const dx=particles[i].x-particles[j].x, dy=particles[i].y-particles[j].y;
+            const dist=Math.sqrt(dx*dx+dy*dy);
+            if(dist<90){ ctx.beginPath(); ctx.moveTo(particles[i].x,particles[i].y); ctx.lineTo(particles[j].x,particles[j].y); ctx.strokeStyle=`rgba(110,231,255,${.12*(1-dist/90)})`; ctx.lineWidth=.5; ctx.stroke(); }
+          }
+        }
+        requestAnimationFrame(draw);
+      }
+      window.addEventListener('resize', ()=>{ resize(); });
+      init(); draw();
+    })();
   </script>
 </body>
 </html>
