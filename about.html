@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>About Us | Absolute Data</title>
-  <meta name="description" content="Absolute Data â€” founded by fixed income specialists and data engineers to bring clarity to global bond markets." />
+  <meta name="description" content="Absolute Data founded by fixed income specialists and data engineers to bring clarity to global bond markets." />
   <link rel="icon" type="image/png" href="images/logo.png" />
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -62,13 +62,46 @@
       <div class="hidden md:flex items-center gap-1">
         <a href="index.html" class="nav-link px-3 py-2 rounded-lg text-sm text-[var(--muted)]">Home</a>
         <a href="about.html" class="px-3 py-2 rounded-lg text-sm font-medium text-white">About</a>
+        <!-- Products dropdown -->
         <div class="nav-dropdown">
-          <button class="nav-dropdown-btn" id="ddProducts">Products <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg></button>
-          <div class="nav-dropdown-menu" id="menuProducts" style="min-width:280px">
-            <span class="menu-label">Products</span>
-            <a href="fixed-income.html" class="dd-item"><span class="icon" style="background:rgba(34,211,238,0.18);box-shadow:0 0 0 1px rgba(34,211,238,0.35)"><svg style="color:#67e8f9" width="17" height="17" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg></span><span class="dd-text"><span class="dd-title">Fixed Income</span><span class="dd-desc">Bond reference data &amp; MA-eligible analytics</span></span></a>
-            <a href="regulatory.html" class="dd-item"><span class="icon" style="background:rgba(167,139,250,0.18);box-shadow:0 0 0 1px rgba(167,139,250,0.35)"><svg style="color:#c4b5fd" width="17" height="17" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M12 2l9 4v6c0 5-3.5 9-9 10-5.5-1-9-5-9-10V6l9-4z"/></svg></span><span class="dd-text"><span class="dd-title">Regulatory</span><span class="dd-desc">Solvency UK matching adjustment framework</span></span></a>
+          <button class="nav-dropdown-btn" id="ddProducts">
+            Products
+            <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg>
+          </button>
+          <div class="nav-dropdown-menu" id="menuProducts" style="min-width:300px">
+            <span class="menu-label">Fixed Income</span>
+            <a href="data-services.html#reference-api" class="dd-item">
+              <span class="icon" style="background:rgba(34,211,238,0.18);box-shadow:0 0 0 1px rgba(34,211,238,0.35)"><svg style="color:#67e8f9" width="17" height="17" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M4 6h16M4 10h16M4 14h10"/></svg></span>
+              <span class="dd-text"><span class="dd-title">Reference Data</span><span class="dd-desc">ISINs, LEIs, ratings &amp; instrument classification</span></span>
+            </a>
+            <a href="data-services.html#corporate-action" class="dd-item">
+              <span class="icon" style="background:rgba(34,211,238,0.18);box-shadow:0 0 0 1px rgba(34,211,238,0.35)"><svg style="color:#67e8f9" width="17" height="17" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M4 4h16v16H4z"/><path d="M9 4v16M15 4v16M4 9h16M4 15h16"/></svg></span>
+              <span class="dd-text"><span class="dd-title">Corporate Actions</span><span class="dd-desc">Automated event capture &amp; entitlement processing</span></span>
+            </a>
+            <a href="data-services.html#pricing-data" class="dd-item">
+              <span class="icon" style="background:rgba(34,211,238,0.18);box-shadow:0 0 0 1px rgba(34,211,238,0.35)"><svg style="color:#67e8f9" width="17" height="17" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M3 3v18h18"/><path d="M7 16l4-4 4 4 4-6"/></svg></span>
+              <span class="dd-text"><span class="dd-title">Pricing</span><span class="dd-desc">EOD &amp; intraday fixed income pricing feeds</span></span>
+            </a>
+            <a href="fixed-income.html" class="dd-item">
+              <span class="icon" style="background:rgba(34,211,238,0.18);box-shadow:0 0 0 1px rgba(34,211,238,0.35)"><svg style="color:#67e8f9" width="17" height="17" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg></span>
+              <span class="dd-text"><span class="dd-title">Municipal</span><span class="dd-desc">Muni bond data across GSAC &amp; securitised products</span></span>
+            </a>
+            <span class="menu-label" style="margin-top:8px">Regulatory Products</span>
+            <a href="regulatory-intelligence.html#erisa" class="dd-item">
+              <span class="icon" style="background:rgba(251,191,36,0.18);box-shadow:0 0 0 1px rgba(251,191,36,0.35)"><svg style="color:#fcd34d" width="17" height="17" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"/></svg></span>
+              <span class="dd-text"><span class="dd-title">ERISA Portfolio Analytics</span><span class="dd-desc">Plan asset classification &amp; 5500 reporting data</span></span>
+            </a>
+            <a href="regulatory-intelligence.html#solvency-ma" class="dd-item">
+              <span class="icon" style="background:rgba(251,191,36,0.18);box-shadow:0 0 0 1px rgba(251,191,36,0.35)"><svg style="color:#fcd34d" width="17" height="17" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M12 2l9 4v6c0 5-3.5 9-9 10-5.5-1-9-5-9-10V6l9-4z"/></svg></span>
+              <span class="dd-text"><span class="dd-title">Solvency UK Matching Adjustment</span><span class="dd-desc">PRA eligibility attestation &amp; spread attribution</span></span>
+            </a>
+            <a href="regulatory-intelligence.html#lei-mapping" class="dd-item">
+              <span class="icon" style="background:rgba(251,191,36,0.18);box-shadow:0 0 0 1px rgba(251,191,36,0.35)"><svg style="color:#fcd34d" width="17" height="17" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"/></svg></span>
+              <span class="dd-text"><span class="dd-title">LEI &amp; Instrument Mapping</span><span class="dd-desc">Cross-reference LEIs to ISIN, CUSIP, FIGI, SEDOL</span></span>
+            </a>
           </div>
+        </div>
+        </div>
         </div>
         <div class="nav-dropdown">
           <button class="nav-dropdown-btn" id="ddData">Data Services <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg></button>
@@ -79,15 +112,6 @@
             <a href="data-services.html#corporate-action" class="dd-item"><span class="icon" style="background:rgba(34,211,238,0.18);box-shadow:0 0 0 1px rgba(34,211,238,0.35)"><svg style="color:#67e8f9" width="17" height="17" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M4 4h16v16H4z"/><path d="M9 4v16M15 4v16M4 9h16M4 15h16"/></svg></span><span class="dd-text"><span class="dd-title">Corporate Actions MCP</span><span class="dd-desc">Automated event capture &amp; entitlement processing</span></span></a>
           </div>
         </div>
-        <!-- RegIntelligence dropdown -->
-        <div class="nav-dropdown">
-          <button class="nav-dropdown-btn" id="ddRegIntel">RegIntelligence <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg></button>
-          <div class="nav-dropdown-menu" id="menuRegIntel" style="min-width:280px">
-            <span class="menu-label">RegIntelligence</span>
-            <a href="regulatory-intelligence.html#erisa" class="dd-item"><span class="icon" style="background:rgba(251,191,36,0.18);box-shadow:0 0 0 1px rgba(251,191,36,0.35)"><svg style="color:#fcd34d" width="17" height="17" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"/></svg></span><span class="dd-text"><span class="dd-title">ERISA Portfolio Analytics</span><span class="dd-desc">Plan asset classification &amp; 5500 reporting data</span></span></a>
-            <a href="regulatory-intelligence.html#solvency-ma" class="dd-item"><span class="icon" style="background:rgba(251,191,36,0.18);box-shadow:0 0 0 1px rgba(251,191,36,0.35)"><svg style="color:#fcd34d" width="17" height="17" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M12 2l9 4v6c0 5-3.5 9-9 10-5.5-1-9-5-9-10V6l9-4z"/></svg></span><span class="dd-text"><span class="dd-title">Solvency UK Matching Adjustment</span><span class="dd-desc">PRA eligibility attestation &amp; spread attribution</span></span></a>
-            <a href="regulatory-intelligence.html#lei-mapping" class="dd-item"><span class="icon" style="background:rgba(251,191,36,0.18);box-shadow:0 0 0 1px rgba(251,191,36,0.35)"><svg style="color:#fcd34d" width="17" height="17" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"/></svg></span><span class="dd-text"><span class="dd-title">LEI &amp; Instrument Mapping</span><span class="dd-desc">Cross-reference LEIs to ISIN, CUSIP, FIGI, SEDOL</span></span></a>
-          </div>
         </div>
         <a href="contact.html" class="nav-link px-3 py-2 rounded-lg text-sm text-[var(--muted)]">Contact</a>
         <a href="contact.html" class="ml-3 btn-primary px-4 py-2 rounded-xl text-sm font-medium text-white">Get in Touch</a>
@@ -100,16 +124,19 @@
       <div class="px-6 py-3 space-y-1">
         <a href="index.html" class="block px-3 py-2 rounded-lg text-[var(--muted)] hover:text-white">Home</a>
         <p class="px-3 pt-2 pb-1 text-xs font-semibold uppercase tracking-wider" style="color:rgba(152,162,179,.5);">Products</p>
-        <a href="fixed-income.html" class="block px-3 py-2 rounded-lg text-[var(--muted)] hover:text-white pl-6">Fixed Income</a>
-        <a href="regulatory.html" class="block px-3 py-2 rounded-lg text-[var(--muted)] hover:text-white pl-6">Regulatory</a>
+        <p class="px-3 pt-1 pb-0.5 text-xs font-semibold uppercase tracking-wider" style="color:rgba(152,162,179,.3);font-size:.6rem">Fixed Income</p>
+        <a href="data-services.html#reference-api" class="block px-3 py-2 rounded-lg text-[var(--muted)] hover:text-white pl-6">Reference Data</a>
+        <a href="data-services.html#corporate-action" class="block px-3 py-2 rounded-lg text-[var(--muted)] hover:text-white pl-6">Corporate Actions</a>
+        <a href="data-services.html#pricing-data" class="block px-3 py-2 rounded-lg text-[var(--muted)] hover:text-white pl-6">Pricing</a>
+        <a href="fixed-income.html" class="block px-3 py-2 rounded-lg text-[var(--muted)] hover:text-white pl-6">Municipal</a>
+        <p class="px-3 pt-1 pb-0.5 text-xs font-semibold uppercase tracking-wider" style="color:rgba(152,162,179,.3);font-size:.6rem">Regulatory Products</p>
+        <a href="regulatory-intelligence.html#erisa" class="block px-3 py-2 rounded-lg pl-6" style="color:var(--muted)">ERISA Portfolio Analytics</a>
+        <a href="regulatory-intelligence.html#solvency-ma" class="block px-3 py-2 rounded-lg pl-6" style="color:var(--muted)">Solvency UK Matching Adjustment</a>
+        <a href="regulatory-intelligence.html#lei-mapping" class="block px-3 py-2 rounded-lg pl-6" style="color:var(--muted)">LEI &amp; Instrument Mapping</a>
         <p class="px-3 pt-2 pb-1 text-xs font-semibold uppercase tracking-wider" style="color:rgba(152,162,179,.5);">Data Services</p>
         <a href="data-services.html#reference-api" class="block px-3 py-2 rounded-lg text-[var(--muted)] hover:text-white pl-6">Reference Data MCP</a>
         <a href="data-services.html#pricing-data" class="block px-3 py-2 rounded-lg text-[var(--muted)] hover:text-white pl-6">Pricing Data MCP</a>
         <a href="data-services.html#corporate-action" class="block px-3 py-2 rounded-lg text-[var(--muted)] hover:text-white pl-6">Corporate Actions MCP</a>
-        <p class="px-3 pt-2 pb-1 text-xs font-semibold uppercase tracking-wider" style="color:rgba(152,162,179,.5)">RegIntelligence</p>
-        <a href="regulatory-intelligence.html#erisa" class="block px-3 py-2 rounded-lg pl-6" style="color:var(--muted)">ERISA Portfolio Analytics</a>
-        <a href="regulatory-intelligence.html#solvency-ma" class="block px-3 py-2 rounded-lg pl-6" style="color:var(--muted)">Solvency UK Matching Adjustment</a>
-        <a href="regulatory-intelligence.html#lei-mapping" class="block px-3 py-2 rounded-lg pl-6" style="color:var(--muted)">LEI &amp; Instrument Mapping</a>
         <a href="about.html" class="block px-3 py-2 rounded-lg text-white font-medium">About</a>
         <a href="contact.html" class="block px-3 py-2 rounded-lg text-[var(--muted)] hover:text-white">Contact</a>
       </div>
@@ -210,7 +237,7 @@
           <p class="text-[var(--muted)] max-w-xl mx-auto">Seasoned professionals at the intersection of fixed income markets, data engineering, and regulatory compliance.</p>
         </div>
         <div class="grid sm:grid-cols-3 gap-8">
-          <!-- Sharad Madan: team-2.png (sharaddd1 â€” senior man with grey hair) -->
+          <!-- Sharad Madan: team-2.png (sharaddd1 senior man with grey hair) -->
           <div class="reveal card rounded-2xl overflow-hidden ring-1 ring-white/10" style="background: var(--bg-soft);">
             <div class="p-4 flex justify-center" style="background: rgba(15,22,35,.8);">
               <img src="images/team-2.png" alt="Sharad Madan" style="height:200px;width:200px;object-fit:cover;object-position:top;border-radius:50%;border:2px solid rgba(110,231,255,0.3);" />
@@ -221,7 +248,7 @@
               <p class="text-xs text-[var(--muted)] leading-relaxed">Senior fixed income data specialist with decades of experience in global bond markets and institutional data infrastructure.</p>
             </div>
           </div>
-          <!-- Matt Spedden: team-3.png (Gemini â€” middle-aged man, red tie) -->
+          <!-- Matt Spedden: team-3.png (Gemini middle-aged man, red tie) -->
           <div class="reveal card rounded-2xl overflow-hidden ring-1 ring-white/10" style="background: var(--bg-soft);">
             <div class="p-4 flex justify-center" style="background: rgba(15,22,35,.8);">
               <img src="images/team-3.png" alt="Matt Spedden" style="height:200px;width:200px;object-fit:cover;object-position:top;border-radius:50%;border:2px solid rgba(110,231,255,0.3);" />
@@ -232,7 +259,7 @@
               <p class="text-xs text-[var(--muted)] leading-relaxed">Product and commercial leader driving Absolute Data's go-to-market strategy, client partnerships, and data product roadmap.</p>
             </div>
           </div>
-          <!-- Frederick Anderson-Bickley: team-1.png (fediii â€” younger man, blue tie) -->
+          <!-- Frederick Anderson-Bickley: team-1.png (fediii younger man, blue tie) -->
           <div class="reveal card rounded-2xl overflow-hidden ring-1 ring-white/10" style="background: var(--bg-soft);">
             <div class="p-4 flex justify-center" style="background: rgba(15,22,35,.8);">
               <img src="images/team-1.png" alt="Frederick Anderson-Bickley" style="height:200px;width:200px;object-fit:cover;object-position:top;border-radius:50%;border:2px solid rgba(110,231,255,0.3);" />

@@ -44,13 +44,46 @@
       <div class="hidden md:flex items-center gap-1">
         <a href="index.html" class="px-3 py-2 rounded-lg text-sm" style="color:var(--muted)">Home</a>
         <a href="about.html" class="px-3 py-2 rounded-lg text-sm" style="color:var(--muted)">About</a>
+        <!-- Products dropdown -->
         <div class="nav-dropdown">
-          <button class="nav-dropdown-btn" id="ddProducts" style="color:var(--text)">Products <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg></button>
-          <div class="nav-dropdown-menu" id="menuProducts" style="min-width:280px">
-            <span class="menu-label">Products</span>
-            <a href="fixed-income.html" class="dd-item"><span class="icon" style="background:rgba(34,211,238,0.18);box-shadow:0 0 0 1px rgba(34,211,238,0.35)"><svg style="color:#67e8f9" width="17" height="17" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg></span><span class="dd-text"><span class="dd-title">Fixed Income</span><span class="dd-desc">Bond reference data &amp; MA-eligible analytics</span></span></a>
-            <a href="regulatory.html" class="active dd-item"><span class="icon" style="background:rgba(167,139,250,0.18);box-shadow:0 0 0 1px rgba(167,139,250,0.35)"><svg style="color:#c4b5fd" width="17" height="17" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M12 2l9 4v6c0 5-3.5 9-9 10-5.5-1-9-5-9-10V6l9-4z"/></svg></span><span class="dd-text"><span class="dd-title">Regulatory</span><span class="dd-desc">Solvency UK matching adjustment framework</span></span></a>
+          <button class="nav-dropdown-btn" id="ddProducts">
+            Products
+            <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg>
+          </button>
+          <div class="nav-dropdown-menu" id="menuProducts" style="min-width:300px">
+            <span class="menu-label">Fixed Income</span>
+            <a href="data-services.html#reference-api" class="dd-item">
+              <span class="icon" style="background:rgba(34,211,238,0.18);box-shadow:0 0 0 1px rgba(34,211,238,0.35)"><svg style="color:#67e8f9" width="17" height="17" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M4 6h16M4 10h16M4 14h10"/></svg></span>
+              <span class="dd-text"><span class="dd-title">Reference Data</span><span class="dd-desc">ISINs, LEIs, ratings &amp; instrument classification</span></span>
+            </a>
+            <a href="data-services.html#corporate-action" class="dd-item">
+              <span class="icon" style="background:rgba(34,211,238,0.18);box-shadow:0 0 0 1px rgba(34,211,238,0.35)"><svg style="color:#67e8f9" width="17" height="17" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M4 4h16v16H4z"/><path d="M9 4v16M15 4v16M4 9h16M4 15h16"/></svg></span>
+              <span class="dd-text"><span class="dd-title">Corporate Actions</span><span class="dd-desc">Automated event capture &amp; entitlement processing</span></span>
+            </a>
+            <a href="data-services.html#pricing-data" class="dd-item">
+              <span class="icon" style="background:rgba(34,211,238,0.18);box-shadow:0 0 0 1px rgba(34,211,238,0.35)"><svg style="color:#67e8f9" width="17" height="17" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M3 3v18h18"/><path d="M7 16l4-4 4 4 4-6"/></svg></span>
+              <span class="dd-text"><span class="dd-title">Pricing</span><span class="dd-desc">EOD &amp; intraday fixed income pricing feeds</span></span>
+            </a>
+            <a href="fixed-income.html" class="dd-item">
+              <span class="icon" style="background:rgba(34,211,238,0.18);box-shadow:0 0 0 1px rgba(34,211,238,0.35)"><svg style="color:#67e8f9" width="17" height="17" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg></span>
+              <span class="dd-text"><span class="dd-title">Municipal</span><span class="dd-desc">Muni bond data across GSAC &amp; securitised products</span></span>
+            </a>
+            <span class="menu-label" style="margin-top:8px">Regulatory Products</span>
+            <a href="regulatory-intelligence.html#erisa" class="dd-item">
+              <span class="icon" style="background:rgba(251,191,36,0.18);box-shadow:0 0 0 1px rgba(251,191,36,0.35)"><svg style="color:#fcd34d" width="17" height="17" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"/></svg></span>
+              <span class="dd-text"><span class="dd-title">ERISA Portfolio Analytics</span><span class="dd-desc">Plan asset classification &amp; 5500 reporting data</span></span>
+            </a>
+            <a href="regulatory-intelligence.html#solvency-ma" class="dd-item">
+              <span class="icon" style="background:rgba(251,191,36,0.18);box-shadow:0 0 0 1px rgba(251,191,36,0.35)"><svg style="color:#fcd34d" width="17" height="17" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M12 2l9 4v6c0 5-3.5 9-9 10-5.5-1-9-5-9-10V6l9-4z"/></svg></span>
+              <span class="dd-text"><span class="dd-title">Solvency UK Matching Adjustment</span><span class="dd-desc">PRA eligibility attestation &amp; spread attribution</span></span>
+            </a>
+            <a href="regulatory-intelligence.html#lei-mapping" class="dd-item">
+              <span class="icon" style="background:rgba(251,191,36,0.18);box-shadow:0 0 0 1px rgba(251,191,36,0.35)"><svg style="color:#fcd34d" width="17" height="17" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"/></svg></span>
+              <span class="dd-text"><span class="dd-title">LEI &amp; Instrument Mapping</span><span class="dd-desc">Cross-reference LEIs to ISIN, CUSIP, FIGI, SEDOL</span></span>
+            </a>
           </div>
+        </div>
+        </div>
         </div>
         <div class="nav-dropdown">
           <button class="nav-dropdown-btn" id="ddData">Data Services <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg></button>
@@ -61,15 +94,6 @@
             <a href="data-services.html#corporate-action" class="dd-item"><span class="icon" style="background:rgba(34,211,238,0.18);box-shadow:0 0 0 1px rgba(34,211,238,0.35)"><svg style="color:#67e8f9" width="17" height="17" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M4 4h16v16H4z"/><path d="M9 4v16M15 4v16M4 9h16M4 15h16"/></svg></span><span class="dd-text"><span class="dd-title">Corporate Actions MCP</span><span class="dd-desc">Automated event capture &amp; entitlement processing</span></span></a>
           </div>
         </div>
-        <!-- RegIntelligence dropdown -->
-        <div class="nav-dropdown">
-          <button class="nav-dropdown-btn" id="ddRegIntel">RegIntelligence <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg></button>
-          <div class="nav-dropdown-menu" id="menuRegIntel" style="min-width:280px">
-            <span class="menu-label">RegIntelligence</span>
-            <a href="regulatory-intelligence.html#erisa" class="dd-item"><span class="icon" style="background:rgba(251,191,36,0.18);box-shadow:0 0 0 1px rgba(251,191,36,0.35)"><svg style="color:#fcd34d" width="17" height="17" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"/></svg></span><span class="dd-text"><span class="dd-title">ERISA Portfolio Analytics</span><span class="dd-desc">Plan asset classification &amp; 5500 reporting data</span></span></a>
-            <a href="regulatory-intelligence.html#solvency-ma" class="dd-item"><span class="icon" style="background:rgba(251,191,36,0.18);box-shadow:0 0 0 1px rgba(251,191,36,0.35)"><svg style="color:#fcd34d" width="17" height="17" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M12 2l9 4v6c0 5-3.5 9-9 10-5.5-1-9-5-9-10V6l9-4z"/></svg></span><span class="dd-text"><span class="dd-title">Solvency UK Matching Adjustment</span><span class="dd-desc">PRA eligibility attestation &amp; spread attribution</span></span></a>
-            <a href="regulatory-intelligence.html#lei-mapping" class="dd-item"><span class="icon" style="background:rgba(251,191,36,0.18);box-shadow:0 0 0 1px rgba(251,191,36,0.35)"><svg style="color:#fcd34d" width="17" height="17" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"/></svg></span><span class="dd-text"><span class="dd-title">LEI &amp; Instrument Mapping</span><span class="dd-desc">Cross-reference LEIs to ISIN, CUSIP, FIGI, SEDOL</span></span></a>
-          </div>
         </div>
         <a href="contact.html" class="px-3 py-2 rounded-lg text-sm" style="color:var(--muted)">Contact</a>
         <a href="contact.html" class="ml-3 btn-violet px-4 py-2 rounded-xl text-sm font-medium text-white">Get in Touch</a>
@@ -88,10 +112,6 @@
         <a href="data-services.html#reference-api" class="block px-3 py-2 rounded-lg pl-6" style="color:var(--muted)">Reference Data MCP</a>
         <a href="data-services.html#pricing-data" class="block px-3 py-2 rounded-lg pl-6" style="color:var(--muted)">Pricing Data MCP</a>
         <a href="data-services.html#corporate-action" class="block px-3 py-2 rounded-lg pl-6" style="color:var(--muted)">Corporate Actions MCP</a>
-        <p class="px-3 pt-2 pb-1 text-xs font-semibold uppercase tracking-wider" style="color:rgba(152,162,179,.5)">RegIntelligence</p>
-        <a href="regulatory-intelligence.html#erisa" class="block px-3 py-2 rounded-lg pl-6" style="color:var(--muted)">ERISA Portfolio Analytics</a>
-        <a href="regulatory-intelligence.html#solvency-ma" class="block px-3 py-2 rounded-lg pl-6" style="color:var(--muted)">Solvency UK Matching Adjustment</a>
-        <a href="regulatory-intelligence.html#lei-mapping" class="block px-3 py-2 rounded-lg pl-6" style="color:var(--muted)">LEI &amp; Instrument Mapping</a>
         <a href="about.html" class="block px-3 py-2 rounded-lg" style="color:var(--muted)">About</a>
         <a href="contact.html" class="block px-3 py-2 rounded-lg" style="color:var(--muted)">Contact</a>
       </div>
@@ -119,7 +139,7 @@
               <h1 class="text-4xl md:text-5xl font-extrabold mt-1">Matching Adjustment Data &amp; Analytics</h1>
             </div>
           </div>
-          <p class="text-xl max-w-3xl" style="color:var(--muted)">A new practice for the Solvency UK era â€” purpose-built data infrastructure and analytical tooling for MA-operating firms.</p>
+          <p class="text-xl max-w-3xl" style="color:var(--muted)">A new practice for the Solvency UK era purpose-built data infrastructure and analytical tooling for MA-operating firms.</p>
         </div>
       </div>
     </section>
@@ -133,8 +153,8 @@
               <svg class="text-violet-300" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 8v4M12 16h.01"/></svg>
             </span>
             <div>
-              <p class="font-semibold text-violet-200 text-sm mb-1">Solvency UK â€” Structural Reform</p>
-              <p class="text-sm" style="color:var(--muted)">The PRA's 2024 implementation of Solvency UK â€” enacted through <strong style="color:var(--text)">PS2/23</strong>, the updated <strong style="color:var(--text)">SS3/17</strong>, and the <strong style="color:var(--text)">Financial Services and Markets Act 2023</strong> â€” represents the most significant recalibration of the Matching Adjustment framework since Solvency II took effect in 2016. These reforms introduce new material changes that collectively alter the operational demands placed on every MA-operating firm.</p>
+              <p class="font-semibold text-violet-200 text-sm mb-1">Solvency UK Structural Reform</p>
+              <p class="text-sm" style="color:var(--muted)">The PRA's 2024 implementation of Solvency UK enacted through <strong style="color:var(--text)">PS2/23</strong>, the updated <strong style="color:var(--text)">SS3/17</strong>, and the <strong style="color:var(--text)">Financial Services and Markets Act 2023</strong> represents the most significant recalibration of the Matching Adjustment framework since Solvency II took effect in 2016. These reforms introduce new material changes that collectively alter the operational demands placed on every MA-operating firm.</p>
             </div>
           </div>
         </div>
@@ -146,10 +166,10 @@
       <div class="max-w-6xl mx-auto px-6">
         <div class="reveal rounded-2xl p-8 md:p-10 ring-1 ring-white/10 mb-10" style="background:rgba(15,22,35,0.7)">
           <p class="text-lg leading-relaxed mb-6" style="color:var(--muted)">
-            We are launching a dedicated team of data engineers, quantitative analysts, and regulatory specialists focused exclusively on the data infrastructure and analytical products that MA-operating firms need to compete under the new framework. This is not a consulting overlay â€” we leverage our proprietary algorithm utilising NLP and LLM capabilities to deliver a purpose-built capability, grounded in the technical realities of Solvency UK and designed to sit alongside your existing actuarial and investment functions.
+            We are launching a dedicated team of data engineers, quantitative analysts, and regulatory specialists focused exclusively on the data infrastructure and analytical products that MA-operating firms need to compete under the new framework. This is not a consulting overlay we leverage our proprietary algorithm utilising NLP and LLM capabilities to deliver a purpose-built capability, grounded in the technical realities of Solvency UK and designed to sit alongside your existing actuarial and investment functions.
           </p>
           <p class="text-lg leading-relaxed mb-10" style="color:var(--muted)">
-            This team exists to convert regulatory pressure into operational clarity. We build the data infrastructure and analytical tooling that risk managers, chief risk officers, and boards need to satisfy the PRA â€” not once, but continuously, across every stage of the investment lifecycle. Solvency UK rewards firms that treat MA data infrastructure as a front-office capability. We help you build it.
+            This team exists to convert regulatory pressure into operational clarity. We build the data infrastructure and analytical tooling that risk managers, chief risk officers, and boards need to satisfy the PRA not once, but continuously, across every stage of the investment lifecycle. Solvency UK rewards firms that treat MA data infrastructure as a front-office capability. We help you build it.
           </p>
 
           <h2 class="font-semibold text-xl mb-6 text-white">Solvency UK Capabilities</h2>
@@ -182,7 +202,7 @@
             <div class="p-5 rounded-xl ring-1 ring-white/8" style="background:rgba(167,139,250,0.06)">
               <div class="inline-flex h-9 w-9 items-center justify-center rounded-lg bg-violet-500/15 ring-1 ring-violet-500/20 mb-3"><svg class="text-violet-300" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2M9 11a4 4 0 100-8 4 4 0 000 8zM23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg></div>
               <h4 class="font-semibold text-sm mb-2">Board &amp; CRO Reporting</h4>
-              <p class="text-xs" style="color:var(--muted)">Structured outputs designed for board-level and CRO consumption â€” translating complex MA data into decision-ready regulatory intelligence.</p>
+              <p class="text-xs" style="color:var(--muted)">Structured outputs designed for board-level and CRO consumption translating complex MA data into decision-ready regulatory intelligence.</p>
             </div>
           </div>
 
