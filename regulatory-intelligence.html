@@ -204,7 +204,7 @@
         </div>
 
         <!-- Main content: Capabilities left, Static+Dynamic right -->
-        <div class="reveal grid md:grid-cols-2 gap-10">
+        <div class="reveal grid md:grid-cols-2 gap-10 items-start">
           <!-- Left: Data Capabilities -->
           <div>
             <h4 class="text-sm font-semibold uppercase tracking-wider mb-4" style="color:var(--muted)">Data Capabilities</h4>
@@ -227,25 +227,25 @@
             </a>
           </div>
           <!-- Right: Static + Dynamic stacked -->
-          <div class="flex flex-col gap-6">
-            <div class="p-6 rounded-2xl ring-1" style="background:rgba(251,191,36,0.04);border-color:rgba(251,191,36,0.18)">
-              <h4 class="text-lg font-bold mb-5 text-white">Static Inputs</h4>
-              <ul class="space-y-3">
-                <li class="flex gap-3 items-start"><svg style="color:#fcd34d;flex-shrink:0;margin-top:3px" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg><span class="text-sm" style="color:var(--muted)">Asset Eligibility Assessment</span></li>
-                <li class="flex gap-3 items-start"><svg style="color:#fcd34d;flex-shrink:0;margin-top:3px" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg><span class="text-sm" style="color:var(--muted)">Credit Quality Step (CQS)</span></li>
-                <li class="flex gap-3 items-start"><svg style="color:#fcd34d;flex-shrink:0;margin-top:3px" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg><span class="text-sm" style="color:var(--muted)">Long-Run Average Spread (LRAS)</span></li>
-                <li class="flex gap-3 items-start"><svg style="color:#fcd34d;flex-shrink:0;margin-top:3px" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg><span class="text-sm" style="color:var(--muted)">Cost of Downgrade (CoD)</span></li>
-                <li class="flex gap-3 items-start"><svg style="color:#fcd34d;flex-shrink:0;margin-top:3px" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg><span class="text-sm" style="color:var(--muted)">Cashflow Matching Test</span></li>
+          <div class="flex flex-col gap-4">
+            <div class="p-4 rounded-xl ring-1" style="background:rgba(251,191,36,0.04);border-color:rgba(251,191,36,0.18)">
+              <h4 class="text-sm font-bold mb-3 text-white uppercase tracking-wider">Static Inputs</h4>
+              <ul class="space-y-2">
+                <li class="flex gap-2 items-center"><svg style="color:#fcd34d;flex-shrink:0" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg><span class="text-xs" style="color:var(--muted)">Asset Eligibility Assessment</span></li>
+                <li class="flex gap-2 items-center"><svg style="color:#fcd34d;flex-shrink:0" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg><span class="text-xs" style="color:var(--muted)">Credit Quality Step (CQS)</span></li>
+                <li class="flex gap-2 items-center"><svg style="color:#fcd34d;flex-shrink:0" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg><span class="text-xs" style="color:var(--muted)">Long-Run Average Spread (LRAS)</span></li>
+                <li class="flex gap-2 items-center"><svg style="color:#fcd34d;flex-shrink:0" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg><span class="text-xs" style="color:var(--muted)">Cost of Downgrade (CoD)</span></li>
+                <li class="flex gap-2 items-center"><svg style="color:#fcd34d;flex-shrink:0" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg><span class="text-xs" style="color:var(--muted)">Cashflow Matching Test</span></li>
               </ul>
             </div>
-            <div class="p-6 rounded-2xl ring-1" style="background:rgba(251,191,36,0.04);border-color:rgba(251,191,36,0.18)">
-              <h4 class="text-lg font-bold mb-5 text-white">Dynamic Inputs</h4>
-              <ul class="space-y-3">
-                <li class="flex gap-3 items-start"><svg style="color:#fcd34d;flex-shrink:0;margin-top:3px" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg><span class="text-sm" style="color:var(--muted)">Firm-Specific Volatility Adjustment (FSVA)</span></li>
-                <li class="flex gap-3 items-start"><svg style="color:#fcd34d;flex-shrink:0;margin-top:3px" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg><span class="text-sm" style="color:var(--muted)">Internal Credit Assessments</span></li>
-                <li class="flex gap-3 items-start"><svg style="color:#fcd34d;flex-shrink:0;margin-top:3px" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg><span class="text-sm" style="color:var(--muted)">Sector Risk Calibrations</span></li>
-                <li class="flex gap-3 items-start"><svg style="color:#fcd34d;flex-shrink:0;margin-top:3px" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg><span class="text-sm" style="color:var(--muted)">Annual Board Attestation</span></li>
-                <li class="flex gap-3 items-start"><svg style="color:#fcd34d;flex-shrink:0;margin-top:3px" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg><span class="text-sm" style="color:var(--muted)">Reinvestment Pipeline Management</span></li>
+            <div class="p-4 rounded-xl ring-1" style="background:rgba(251,191,36,0.04);border-color:rgba(251,191,36,0.18)">
+              <h4 class="text-sm font-bold mb-3 text-white uppercase tracking-wider">Dynamic Inputs</h4>
+              <ul class="space-y-2">
+                <li class="flex gap-2 items-center"><svg style="color:#fcd34d;flex-shrink:0" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg><span class="text-xs" style="color:var(--muted)">Firm-Specific Volatility Adjustment (FSVA)</span></li>
+                <li class="flex gap-2 items-center"><svg style="color:#fcd34d;flex-shrink:0" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg><span class="text-xs" style="color:var(--muted)">Internal Credit Assessments</span></li>
+                <li class="flex gap-2 items-center"><svg style="color:#fcd34d;flex-shrink:0" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg><span class="text-xs" style="color:var(--muted)">Sector Risk Calibrations</span></li>
+                <li class="flex gap-2 items-center"><svg style="color:#fcd34d;flex-shrink:0" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg><span class="text-xs" style="color:var(--muted)">Annual Board Attestation</span></li>
+                <li class="flex gap-2 items-center"><svg style="color:#fcd34d;flex-shrink:0" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg><span class="text-xs" style="color:var(--muted)">Reinvestment Pipeline Management</span></li>
               </ul>
             </div>
           </div>
