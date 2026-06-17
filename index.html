@@ -155,7 +155,7 @@
             Institutional-grade reference data and corporate actions generated through a next-generation GenAI pipeline.
           </p>
           <div class="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="products.html" class="btn-primary inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl text-white font-medium">
+            <a href="#what-we-deliver" onclick="event.preventDefault();document.getElementById('what-we-deliver').scrollIntoView({behavior:'smooth'})" class="btn-primary inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl text-white font-medium">
               Explore Products
               <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
             </a>
@@ -224,7 +224,7 @@
     </section>
 
     <!-- PRODUCTS OVERVIEW -->
-    <section class="py-20 border-t border-white/5" style="background:var(--bg-soft)">
+    <section id="what-we-deliver" class="py-20 border-t border-white/5" style="background:var(--bg-soft)">
       <div class="max-w-6xl mx-auto px-6">
         <div class="reveal text-center mb-12">
           <span class="inline-flex items-center text-xs font-semibold tracking-widest uppercase text-cyan-200/80 bg-cyan-400/10 ring-1 ring-cyan-400/20 px-3 py-1 rounded-full mb-4">Our Products</span>
@@ -236,66 +236,66 @@
           <div>
             <p class="text-xs font-semibold uppercase tracking-widest mb-6" style="color:rgba(110,231,255,.6)">Fixed Income Products</p>
             <div class="space-y-5">
-              <div class="flex gap-4 items-start">
+              <a href="fixed-income.html#reference-api" class="flex gap-4 items-start group hover:opacity-80 transition-opacity">
                 <div class="inline-flex h-9 w-9 items-center justify-center rounded-lg bg-cyan-400/10 ring-1 ring-cyan-400/20 flex-shrink-0 mt-0.5">
                   <svg class="text-cyan-300" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M4 6h16M4 10h16M4 14h10"/></svg>
                 </div>
                 <div>
-                  <p class="font-semibold text-sm text-white">Reference Data</p>
+                  <p class="font-semibold text-sm text-white group-hover:underline">Reference Data</p>
                   <p class="text-sm mt-0.5" style="color:var(--muted)">ISINs, LEIs, ratings and instrument classification for the full fixed income universe.</p>
                 </div>
-              </div>
-              <div class="flex gap-4 items-start">
+              </a>
+              <a href="fixed-income.html#corporate-action" class="flex gap-4 items-start group hover:opacity-80 transition-opacity">
                 <div class="inline-flex h-9 w-9 items-center justify-center rounded-lg bg-cyan-400/10 ring-1 ring-cyan-400/20 flex-shrink-0 mt-0.5">
                   <svg class="text-cyan-300" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M4 4h16v16H4z"/><path d="M9 4v16M15 4v16M4 9h16M4 15h16"/></svg>
                 </div>
                 <div>
-                  <p class="font-semibold text-sm text-white">Corporate Actions</p>
+                  <p class="font-semibold text-sm text-white group-hover:underline">Corporate Actions</p>
                   <p class="text-sm mt-0.5" style="color:var(--muted)">Automated event capture and entitlement processing across the full investment lifecycle.</p>
                 </div>
-              </div>
-              <div class="flex gap-4 items-start">
+              </a>
+              <a href="fixed-income.html#pricing-data" class="flex gap-4 items-start group hover:opacity-80 transition-opacity">
                 <div class="inline-flex h-9 w-9 items-center justify-center rounded-lg bg-cyan-400/10 ring-1 ring-cyan-400/20 flex-shrink-0 mt-0.5">
                   <svg class="text-cyan-300" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M3 3v18h18"/><path d="M7 16l4-4 4 4 4-6"/></svg>
                 </div>
                 <div>
-                  <p class="font-semibold text-sm text-white">Pricing</p>
+                  <p class="font-semibold text-sm text-white group-hover:underline">Pricing</p>
                   <p class="text-sm mt-0.5" style="color:var(--muted)">EOD and intraday fixed income pricing feeds for illiquid and structured credit assets.</p>
                 </div>
-              </div>
+              </a>
             </div>
           </div>
           <!-- Regulatory -->
           <div>
             <p class="text-xs font-semibold uppercase tracking-widest mb-6" style="color:rgba(251,191,36,.6)">Regulatory Products</p>
             <div class="space-y-5">
-              <div class="flex gap-4 items-start">
+              <a href="regulatory-intelligence.html#erisa" class="flex gap-4 items-start group hover:opacity-80 transition-opacity">
                 <div class="inline-flex h-9 w-9 items-center justify-center rounded-lg flex-shrink-0 mt-0.5" style="background:rgba(251,191,36,0.12);box-shadow:0 0 0 1px rgba(251,191,36,0.3)">
                   <svg style="color:#fcd34d" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"/></svg>
                 </div>
                 <div>
-                  <p class="font-semibold text-sm text-white">ERISA Portfolio Analytics</p>
+                  <p class="font-semibold text-sm text-white group-hover:underline">ERISA Portfolio Analytics</p>
                   <p class="text-sm mt-0.5" style="color:var(--muted)">Plan asset classification, prohibited transaction monitoring, and 5500 reporting data.</p>
                 </div>
-              </div>
-              <div class="flex gap-4 items-start">
+              </a>
+              <a href="regulatory-intelligence.html#solvency-ma" class="flex gap-4 items-start group hover:opacity-80 transition-opacity">
                 <div class="inline-flex h-9 w-9 items-center justify-center rounded-lg flex-shrink-0 mt-0.5" style="background:rgba(251,191,36,0.12);box-shadow:0 0 0 1px rgba(251,191,36,0.3)">
                   <svg style="color:#fcd34d" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M12 2l9 4v6c0 5-3.5 9-9 10-5.5-1-9-5-9-10V6l9-4z"/></svg>
                 </div>
                 <div>
-                  <p class="font-semibold text-sm text-white">Matching Adjustment</p>
+                  <p class="font-semibold text-sm text-white group-hover:underline">Matching Adjustment</p>
                   <p class="text-sm mt-0.5" style="color:var(--muted)">PRA eligibility attestation, spread attribution, and MA portfolio lifecycle monitoring.</p>
                 </div>
-              </div>
-              <div class="flex gap-4 items-start">
+              </a>
+              <a href="regulatory-intelligence.html#lei-mapping" class="flex gap-4 items-start group hover:opacity-80 transition-opacity">
                 <div class="inline-flex h-9 w-9 items-center justify-center rounded-lg flex-shrink-0 mt-0.5" style="background:rgba(251,191,36,0.12);box-shadow:0 0 0 1px rgba(251,191,36,0.3)">
                   <svg style="color:#fcd34d" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"/></svg>
                 </div>
                 <div>
-                  <p class="font-semibold text-sm text-white">LEI &amp; Instrument Mapping</p>
+                  <p class="font-semibold text-sm text-white group-hover:underline">LEI &amp; Instrument Mapping</p>
                   <p class="text-sm mt-0.5" style="color:var(--muted)">Cross-reference LEIs to ISINs, FIGIs and other identifiers for EMIR and MiFID II reporting.</p>
                 </div>
-              </div>
+              </a>
             </div>
           </div>
         </div>
